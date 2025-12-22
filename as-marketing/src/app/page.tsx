@@ -1,6 +1,8 @@
 import { Hero } from "@/components/home/Hero";
 import dynamic from 'next/dynamic';
 
+const ReviewSlider = dynamic(() => import('@/components/home/ReviewSlider').then(mod => mod.ReviewSlider));
+
 const ServicesSnapshot = dynamic(() => import('@/components/home/ServicesSnapshot').then(mod => mod.ServicesSnapshot), {
   loading: () => <div className="h-96" /> // Placeholder to prevent layout shift
 });
@@ -12,8 +14,9 @@ const MapSection = dynamic(() => import('@/components/home/MapSection').then(mod
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-0">
       <Hero />
+      <ReviewSlider />
       <ServicesSnapshot />
       <TrustSection />
       <CeoSection />
