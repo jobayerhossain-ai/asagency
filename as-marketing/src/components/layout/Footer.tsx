@@ -50,7 +50,7 @@ export const Footer = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-8">
                     {/* Brand */}
-                    <div className="md:col-span-1 space-y-6">
+                    <div className="md:col-span-1 space-y-6 -mt-6">
                         <Link href="/" className="block">
                             <Image
                                 src="/logo.png"
@@ -105,6 +105,9 @@ export const Footer = () => {
                         </h4>
                         <ul className="space-y-2">
                             <FooterLink href="/services">{t.services.items.facebook}</FooterLink>
+                            <FooterLink href="/services">{t.services.items.instagram}</FooterLink>
+                            <FooterLink href="/services">{t.services.items.tiktok}</FooterLink>
+                            <FooterLink href="/services">{t.services.items.youtube}</FooterLink>
                             <FooterLink href="/services">{t.services.items.web}</FooterLink>
                             <FooterLink href="/services">{t.services.items.graphics}</FooterLink>
                         </ul>
@@ -135,7 +138,7 @@ export const Footer = () => {
                         {t.footer.rights}
                     </p>
                     <div className="text-xs font-medium text-slate-400 text-center">
-                        Design & Developed by <a href="https://devorica.com" target="_blank" rel="noopener noreferrer" className="text-brand-neon hover:text-brand-neon/80 transition-colors">DevOrica</a>
+                        Design & Developed by <a href="https://www.facebook.com/asmarketingbusiness1.bd" target="_blank" rel="noopener noreferrer" className="text-brand-neon hover:text-brand-neon/80 transition-colors">AS Marketing Business</a>
                     </div>
                 </div>
             </div>

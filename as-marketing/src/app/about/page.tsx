@@ -19,8 +19,8 @@ export default function AboutPage() {
                         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                             {t.nav.about} (Company Profile)
                         </h1>
-                        <p className="text-lg text-slate-600">
-                            {t.hero.title}
+                        <p className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-neon via-purple-600 to-pink-500 animate-text">
+                            AS Marketing Business
                         </p>
                     </div>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
                                                 className="inline-flex items-center gap-1.5 px-3 py-1 text-sm font-medium text-brand-neon bg-brand-neon/5 border border-brand-neon/20 rounded-full hover:bg-brand-neon hover:text-white transition-all active:scale-95"
                                             >
                                                 <FileText size={14} />
-                                                লাইসেন্স দেখুন
+                                                {t.trust.viewLicense}
                                             </button>
                                         )}
                                     </div>

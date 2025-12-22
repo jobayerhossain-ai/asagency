@@ -86,54 +86,58 @@ export const ServicesSnapshot = () => {
                 >
                     <div className="text-center mb-12">
                         <h3 className="text-3xl md:text-4xl font-bold text-heading">
-                            {t.nav.pricing} পেমেন্ট মেথড
+                            পেমেন্ট মেথড
                         </h3>
                         <div className="w-20 h-1 bg-brand-neon mx-auto rounded-full mt-4" />
                     </div>
 
-                    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
                         {/* Bkash */}
                         <div
                             onClick={() => setSelectedPaymentMethod('bkash')}
-                            className="group relative flex items-center justify-center bg-white border border-pink-100 rounded-xl p-6 w-48 h-24 shadow-sm hover:shadow-md hover:border-pink-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
+                            className="group relative flex items-center justify-center bg-white border border-pink-100 rounded-xl p-2 w-40 h-20 shadow-sm hover:shadow-md hover:border-pink-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
                         >
                             <img
                                 src="https://download.logo.wine/logo/BKash/BKash-Logo.wine.png"
                                 alt="bKash"
-                                className="h-16 w-auto object-contain"
+                                className="w-full h-full object-contain"
                             />
                         </div>
 
                         {/* Nagad */}
                         <div
                             onClick={() => setSelectedPaymentMethod('nagad')}
-                            className="group relative flex items-center justify-center bg-white border border-orange-100 rounded-xl p-6 w-48 h-24 shadow-sm hover:shadow-md hover:border-orange-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
+                            className="group relative flex items-center justify-center bg-white border border-orange-100 rounded-xl p-2 w-40 h-20 shadow-sm hover:shadow-md hover:border-orange-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
                         >
                             <img
                                 src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png"
                                 alt="Nagad"
-                                className="h-14 w-auto object-contain"
+                                className="w-full h-full object-contain"
                             />
                         </div>
 
                         {/* Rocket */}
                         <div
                             onClick={() => setSelectedPaymentMethod('rocket')}
-                            className="group relative flex items-center justify-center bg-white border border-purple-100 rounded-xl p-6 w-48 h-24 shadow-sm hover:shadow-md hover:border-purple-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
+                            className="group relative flex items-center justify-center bg-white border border-purple-100 rounded-xl p-2 w-40 h-20 shadow-sm hover:shadow-md hover:border-purple-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
                         >
                             <img
                                 src="/rocket.png"
                                 alt="Rocket"
-                                className="h-14 w-auto object-contain"
+                                className="w-full h-full object-contain"
                             />
                         </div>
 
-                        {/* Bank / NPSB */}
-                        <div className="group relative flex items-center justify-center bg-white border border-blue-100 rounded-xl p-6 w-48 h-24 shadow-sm hover:shadow-md hover:border-blue-500 transition-all duration-300">
-                            <div className="flex flex-col items-center leading-none scale-125">
-                                <span className="text-xl font-extrabold text-[#005C9D] tracking-tighter">NPSB</span>
-                                <span className="text-[9px] font-semibold text-slate-500 uppercase tracking-widest mt-0.5">National Switch</span>
-                            </div>
+                        {/* NPSB */}
+                        <div
+                            onClick={() => setSelectedPaymentMethod('npsb')}
+                            className="group relative flex items-center justify-center bg-white border border-blue-100 rounded-xl p-4 w-40 h-20 shadow-sm hover:shadow-md hover:border-blue-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
+                        >
+                            <img
+                                src="/npsb-logo.png"
+                                alt="NPSB"
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                     </div>
                 </motion.div>

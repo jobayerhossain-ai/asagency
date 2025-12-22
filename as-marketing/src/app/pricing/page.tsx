@@ -101,7 +101,15 @@ Please provide details.`;
                                                 className="flex items-center justify-between p-3 rounded-lg bg-slate-50 hover:bg-blue-50 transition-colors group"
                                             >
                                                 <div className="flex flex-col">
-                                                    <span className="font-semibold text-heading">{opt.name}</span>
+                                                    <span className="font-semibold text-heading">
+                                                        {opt.name.split(/([0-9\u09E6-\u09EF]+)/g).map((part, i) => (
+                                                            /^[0-9\u09E6-\u09EF]+$/.test(part) ? (
+                                                                <span key={i} className="text-brand-neon font-bold">{part}</span>
+                                                            ) : (
+                                                                <span key={i}>{part}</span>
+                                                            )
+                                                        ))}
+                                                    </span>
                                                 </div>
                                                 <div className="flex items-center gap-3">
                                                     <span className="font-bold text-brand-neon">{opt.price}</span>

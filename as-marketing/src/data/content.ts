@@ -40,6 +40,7 @@ export interface Content {
         title: string;
         description: string;
         points: { title: string; desc: string; image?: string; }[];
+        viewLicense: string;
     };
     proofs: {
         title: string;
@@ -62,6 +63,13 @@ export interface Content {
     footer: {
         rights: string;
     };
+    ceo: {
+        title: string;
+        name: string;
+        role: string;
+        quote: string;
+        description: string;
+    };
 }
 
 export const content: Record<Language, Content> = {
@@ -77,7 +85,7 @@ export const content: Record<Language, Content> = {
         },
         hero: {
             title: 'AS Marketing Business',
-            subtitle: 'বিশ্বাসের নাম',
+            subtitle: 'বিশ্বাসের একটি নাম',
             description: 'আমরা আধুনিক ডিজিটাল মার্কেটিং স্ট্র্যাটেজির মাধ্যমে আপনার ব্যবসাকে অনলাইনে দ্রুত গ্রো করতে সহায়তা করি।',
             ctaPrimary: 'ফেসবুকে মেসেজ দিন',
             ctaSecondary: 'WhatsApp এ যোগাযোগ করুন',
@@ -94,16 +102,18 @@ export const content: Record<Language, Content> = {
             },
             details: {
                 facebook: [
-                    'টার্গেটেড অ্যাড ক্যাম্পেইন ও প্রফেশনাল অ্যাড সেটআপ',
-                    'কনভার্সন ট্র্যাকিংয়ের জন্য ফেসবুক পিক্সেল (Pixel) সেটআপ',
-                    'রেগুলার এনগেজমেন্ট অ্যাড এবং রিয়েল ফলোয়ার সার্ভিস',
-                    'অডিয়েন্স রি-টার্গেটিং ও সেলস ফানেল তৈরি'
+                    'এড ক্যাম্পেইন',
+                    'প্রফেশনাল এড',
+                    'পিক্সেল এ‍ড',
+                    'রেগুলার এড',
+                    'ফেসবুক ফলোয়ার'
                 ],
                 instagram: [
-                    'টার্গেটেড অ্যাড ক্যাম্পেইন ও প্রফেশনাল অ্যাড সেটআপ',
-                    'কনভার্সন ট্র্যাকিংয়ের জন্য ফেসবুক পিক্সেল (Pixel) সেটআপ',
-                    'রেগুলার এনগেজমেন্ট অ্যাড এবং রিয়েল ফলোয়ার সার্ভিস',
-                    'স্টোরি ও রিলস প্রোমোশন'
+                    'এড ক্যাম্পেইন',
+                    'প্রফেশনাল এড',
+                    'পিক্সেল এ‍ড',
+                    'রেগুলার এড',
+                    'ইনস্টাগ্রাম ফলোয়ার'
                 ],
                 tiktok: [
                     'টিকটক অ্যাড ক্যাম্পেইন ও ভিডিও প্রমোট',
@@ -125,10 +135,13 @@ export const content: Record<Language, Content> = {
                     'ফুল এসইও (SEO) অপটিমাইজেশন ও গ্লোবাল স্ক্যালেবিলিটি'
                 ],
                 graphics: [
-                    'প্রফেশনাল গ্রাফিক্স ডিজাইন',
-                    'লোগো ও ব্র্যান্ড বুক তৈরি',
-                    'সোশ্যাল মিডিয়া কন্টেন্ট ডিজাইন',
-                    'প্রোমোশনাল ব্যানার ও পোস্টার ডিজাইন'
+                    'ব্র্যান্ডিং লোগো, ব্র্যান্ড আইডেন্টিটি',
+                    'ডিজিটাল ও সোশ্যাল মিডিয়া',
+                    'ব্যানার ও কভার ফটো',
+                    'বিজ্ঞাপন (Ads) ডিজাইন',
+                    'ফটো এডিটিং',
+                    'ভেক্টর ট্রেসিং',
+                    'ইলাস্ট্রেশন'
                 ],
             },
         },
@@ -158,13 +171,14 @@ export const content: Record<Language, Content> = {
                 },
                 {
                     title: 'সরকারিভাবে অনুমোদিত',
-                    desc: 'আমরা একটি সরকারি রেজিস্টার্ড আইটি এজেন্সি ( ট্রেড লাইসেন্স নং: ... )। আপনার বিশ্বাস ও নিরাপত্তাই আমাদের প্রধান লক্ষ্য।',
+                    desc: 'আমরা একটি সরকার অনুমোদিত আইটি কোম্পানি (ট্রেড লাইসেন্স নং: ০৭৬১৪)। আপনার বিশ্বাস ও নিরাপত্তাই আমাদের প্রধান লক্ষ্য।',
                     image: '/license.png'
                 }
-            ]
+            ],
+            viewLicense: 'লাইসেন্স দেখুন',
         },
         proofs: {
-            title: 'সাকসেস প্রুফ (Success Proofs)',
+            title: 'ক্লায়েন্ট রিভিউ (Client Reviews)',
             description: 'আমাদের কাজের বাস্তব ফলাফল দেখুন। আমরা কথায় নয়, কাজে বিশ্বাসী।',
             viewProof: 'প্রুফ দেখুন',
         },
@@ -209,6 +223,13 @@ export const content: Record<Language, Content> = {
         },
         footer: {
             rights: '© ২০২০-২০২৫ AS Marketing Business. সর্বস্বত্ব সংরক্ষিত।',
+        },
+        ceo: {
+            title: 'আমাদের নেতৃত্ব',
+            name: 'সোহানুর রহমান',
+            role: 'সিইও এবং প্রতিষ্ঠাতা',
+            quote: 'সফলতা শুধু লক্ষ্য নয়, এটি একটি যাত্রা।',
+            description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
         },
     },
     en: {
@@ -307,10 +328,11 @@ export const content: Record<Language, Content> = {
                     desc: 'We are a government registered IT agency (Trade License No: ...). Your trust and security is our main goal.',
                     image: '/license.png'
                 }
-            ]
+            ],
+            viewLicense: 'View License',
         },
         proofs: {
-            title: 'Success Proofs',
+            title: 'Client Reviews',
             description: 'See the real results of our work. We believe in action, not just words.',
             viewProof: 'View Proof',
         },
@@ -355,6 +377,13 @@ export const content: Record<Language, Content> = {
         },
         footer: {
             rights: '© 2020-2025 AS Marketing Business. All rights reserved.',
+        },
+        ceo: {
+            title: 'Our Leadership',
+            name: 'Sohanur Rahman',
+            role: 'CEO & Founder',
+            quote: 'Success is not just a goal, it\'s a journey.',
+            description: 'I founded AS Marketing Business with a vision to unlock new horizons of business success through world-class digital marketing services. Our goal is to ensure the best results and long-term success for every client.'
         },
     },
 };

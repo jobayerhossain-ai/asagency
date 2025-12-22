@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/Button';
 import { fadeInUp, staggerContainer } from '@/utils/animations';
@@ -12,12 +13,12 @@ export const Hero = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32">
             {/* Background Decorative Elements */}
             <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(10,26,255,0.05)_0%,transparent_70%)] pointer-events-none" />
             <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(234,246,255,0.6)_0%,transparent_70%)] pointer-events-none" />
 
-            <div className="container mx-auto px-4 text-center z-10">
+            <div className="container mx-auto px-6 md:px-8 text-center z-10">
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
@@ -25,7 +26,7 @@ export const Hero = () => {
                     className="max-w-4xl mx-auto"
                 >
                     {/* Tagline */}
-                    <motion.div variants={fadeInUp} className="mb-4">
+                    <motion.div variants={fadeInUp} className="mb-8">
                         <span className="inline-block px-6 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-brand-sky text-lg font-bold tracking-wide text-brand-neon">
                             {t.hero.subtitle}
                         </span>
@@ -84,6 +85,23 @@ export const Hero = () => {
                                 {t.hero.ctaSecondary}
                             </Button>
                         </a>
+                    </motion.div>
+
+                    {/* Cover Image */}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="mt-16"
+                    >
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+                            <Image
+                                src="/our-services-cover.jpg"
+                                alt="Our Services - AS Marketing"
+                                width={1200}
+                                height={400}
+                                className="w-full h-auto object-cover"
+                                priority
+                            />
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>
