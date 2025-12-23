@@ -65,7 +65,7 @@ export default function PortfolioPage() {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.4 }}
                             whileHover={{ y: -10 }}
-                            className="relative group cursor-pointer aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-neon/10 border border-slate-100 bg-white transition-all duration-300"
+                            className="relative group cursor-pointer aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-neon/10 border border-sky-500/30 hover:border-sky-500 transition-all duration-300"
                             onClick={() => setSelectedImage(proof.src)}
                         >
                             <div className="absolute inset-2 rounded-xl overflow-hidden bg-slate-50">

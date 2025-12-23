@@ -48,7 +48,7 @@ export const ReviewSlider = () => {
                             {[...reviews, ...reviews].map((review, idx) => (
                                 <div
                                     key={`${review.id}-${idx}`}
-                                    className="relative flex-none w-[280px] md:w-[350px] aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white border border-slate-200/60"
+                                    className="relative flex-none w-[280px] md:w-[350px] aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white border border-sky-500/30 hover:border-sky-500"
                                 >
                                     <Image
                                         src={review.src}
