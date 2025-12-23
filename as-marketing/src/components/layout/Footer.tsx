@@ -16,7 +16,7 @@ export const Footer = () => {
         <li>
             <Link
                 href={href}
-                className="group flex items-center gap-2 text-slate-500 hover:text-brand-neon text-sm transition-all duration-300 hover:translate-x-1"
+                className="group flex items-center justify-center md:justify-start gap-2 text-slate-500 hover:text-brand-neon text-sm transition-all duration-300 hover:translate-x-1"
             >
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-brand-neon transition-colors" />
                 {children}
@@ -26,8 +26,8 @@ export const Footer = () => {
 
     const ContactItem = ({ icon: Icon, children, href }: { icon: any, children: React.ReactNode, href?: string }) => {
         const Content = () => (
-            <div className="flex items-start gap-3 text-slate-500 hover:text-brand-neon transition-colors group">
-                <div className="mt-0.5 p-1.5 rounded-full bg-slate-50 group-hover:bg-brand-neon/10 transition-colors text-brand-neon">
+            <div className="flex items-center md:items-start justify-center md:justify-start gap-3 text-slate-500 hover:text-brand-neon transition-colors group text-center md:text-left">
+                <div className="mt-0.5 p-1.5 rounded-full bg-slate-50 group-hover:bg-brand-neon/10 transition-colors text-brand-neon shrink-0">
                     <Icon size={14} />
                 </div>
                 <span className="text-sm leading-relaxed">{children}</span>
@@ -50,20 +50,20 @@ export const Footer = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-8">
                     {/* Brand */}
-                    <div className="md:col-span-1 space-y-6 -mt-6">
+                    <div className="md:col-span-1 space-y-6 -mt-6 flex flex-col items-center md:items-start text-center md:text-left">
                         <Link href="/" className="block">
                             <Image
                                 src="/logo.png"
                                 alt="AS Marketing"
                                 width={200}
                                 height={70}
-                                className="h-20 w-auto object-contain -ml-2"
+                                className="h-14 md:h-20 w-auto object-contain mx-auto md:mx-0 md:-ml-2"
                             />
                         </Link>
                         <p className="text-slate-500 text-sm leading-7">
-                            {t.hero.subtitle} - {t.hero.description}
+                            {t.hero.description}
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 justify-center md:justify-start">
                             {[
                                 { Icon: FacebookIcon, href: CONFIG.socials.facebook },
                                 { Icon: InstagramIcon, href: CONFIG.socials.instagram },
@@ -84,10 +84,10 @@ export const Footer = () => {
                     </div>
 
                     {/* Links 1 */}
-                    <div>
-                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
+                    <div className="text-center md:text-left">
+                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
                             Company
-                            <div className="h-px flex-1 bg-slate-100" />
+                            <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">
                             <FooterLink href="/about">{t.nav.about}</FooterLink>
@@ -98,10 +98,10 @@ export const Footer = () => {
                     </div>
 
                     {/* Links 2 */}
-                    <div>
-                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
+                    <div className="text-center md:text-left">
+                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
                             Services
-                            <div className="h-px flex-1 bg-slate-100" />
+                            <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">
                             <FooterLink href="/services">{t.services.items.facebook}</FooterLink>
@@ -114,10 +114,10 @@ export const Footer = () => {
                     </div>
 
                     {/* Contact */}
-                    <div>
-                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
+                    <div className="text-center md:text-left">
+                        <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
                             Contact
-                            <div className="h-px flex-1 bg-slate-100" />
+                            <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">
                             <ContactItem icon={Mail} href={`mailto:${CONFIG.contact.email}`}>
