@@ -1,7 +1,7 @@
 'use client';
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/context/LanguageContext';
-import { Facebook, Instagram, Video, Youtube, Code, CheckCircle2 } from 'lucide-react';
+import { Facebook, Instagram, Video, Youtube, Code, CheckCircle2, Palette } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/utils/animations';
 
@@ -14,9 +14,10 @@ export default function ServicesPage() {
         tiktok: { icon: Video, color: 'text-black', bg: 'bg-gray-100' },
         youtube: { icon: Youtube, color: 'text-red-600', bg: 'bg-red-50' },
         web: { icon: Code, color: 'text-indigo-600', bg: 'bg-indigo-50' },
+        graphics: { icon: Palette, color: 'text-purple-600', bg: 'bg-purple-50' },
     };
 
-    const categories = ['facebook', 'instagram', 'tiktok', 'youtube', 'web'] as const;
+    const categories = ['facebook', 'instagram', 'tiktok', 'youtube', 'web', 'graphics'] as const;
 
     return (
         <div className="container mx-auto px-4 py-32 min-h-screen">
