@@ -122,10 +122,14 @@ export const content: Record<Language, Content> = {
                     'কয়েন রিচার্জ'
                 ],
                 youtube: [
-                    'প্রোডাক্ট মার্কেটিং ও প্রফেশনাল অ্যাড ক্যাম্পেইন',
-                    'চ্যানেল মনিটাইজেশন, সাবস্ক্রাইবার এবং ওয়াচ-টাইম সার্ভিস',
-                    'ভিডিও প্রমোশন (লাইক, কমেন্ট, শেয়ার)',
-                    'গুগল অ্যাডসেন্স পিন ভেরিফিকেশন ও ইউটিউব প্রিমিয়াম'
+                    'ইউটিউবে প্রোডাক্ট মার্কেটিং',
+                    'সাবস্ক্রাইবার',
+                    'ওয়াচ টাইম',
+                    'ভিডিওতে লাইক, কমেন্ট ও শেয়ার',
+                    'প্রফেশনাল এ্যাডস ক্যাম্পেইন',
+                    'গুগল অ্যাডসেন্স পিন ভেরিফাই',
+                    'ইউটিউব চ্যানেল মনিটাইজ',
+                    'ইউটিউব প্রিমিয়াম'
                 ],
                 web: [
                     'ডোমেইন ও হাই-স্পিড হোস্টিং',
@@ -279,10 +283,14 @@ export const content: Record<Language, Content> = {
                     'Coin Recharge'
                 ],
                 youtube: [
-                    'Product Marketing & Professional Ad Campaigns',
-                    'Channel Monetization, Subscribers & Watch-Time Service',
-                    'Video Promotion (Like, Comment, Share)',
-                    'Google AdSense Pin Verification & YouTube Premium'
+                    'YouTube Product Marketing',
+                    'Subscribers',
+                    'Watch Time',
+                    'Video Engagement (Like, Comment, Share)',
+                    'Professional Ads Campaign',
+                    'Google AdSense Pin Verification',
+                    'YouTube Channel Monetization',
+                    'YouTube Premium'
                 ],
                 web: [
                     'Domain & High-Speed Hosting',
