@@ -46,7 +46,7 @@ export default function ServicesPage() {
                                         <div className={`p-3 rounded-xl ${style.bg} ${style.color}`}>
                                             <Icon size={32} />
                                         </div>
-                                        <h2 className="text-2xl font-bold text-heading">{title}</h2>
+                                        <h2 className="text-2xl font-bold text-heading bg-green-50/80 px-4 py-2 rounded-lg border border-green-100/50 backdrop-blur-sm">{title}</h2>
                                     </div>
 
                                     <ul className="space-y-3">

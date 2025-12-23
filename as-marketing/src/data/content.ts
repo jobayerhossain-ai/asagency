@@ -93,10 +93,10 @@ export const content: Record<Language, Content> = {
         services: {
             title: 'আমাদের প্রিমিয়াম সার্ভিসসমূহ',
             items: {
-                facebook: 'ফেসবুক মার্কেটিং (Meta Ads)',
-                instagram: 'ইনস্টাগ্রাম মার্কেটিং (Meta Ads)',
-                tiktok: 'টিকটক মার্কেটিং',
-                youtube: 'ইউটিউব ও ভিডিও মার্কেটিং',
+                facebook: 'ফেসবুক সার্ভিস (Meta Ads)',
+                instagram: 'ইনস্টাগ্রাম সার্ভিস (Meta Ads)',
+                tiktok: 'টিকটক সার্ভিস',
+                youtube: 'ইউটিউব ও ভিডিও সার্ভিস',
                 web: 'ওয়েবসাইট সলিউশন',
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
@@ -261,10 +261,10 @@ export const content: Record<Language, Content> = {
         services: {
             title: 'Our Premium Services',
             items: {
-                facebook: 'Facebook Marketing (Meta Ads)',
-                instagram: 'Instagram Marketing (Meta Ads)',
-                tiktok: 'TikTok Marketing',
-                youtube: 'YouTube & Video Marketing',
+                facebook: 'Facebook Services (Meta Ads)',
+                instagram: 'Instagram Services (Meta Ads)',
+                tiktok: 'TikTok Services',
+                youtube: 'YouTube & Video Services',
                 web: 'Website Solutions',
                 graphics: 'Design & Branding',
             },
