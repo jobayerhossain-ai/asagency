@@ -132,11 +132,16 @@ export const content: Record<Language, Content> = {
                     'ইউটিউব প্রিমিয়াম'
                 ],
                 web: [
-                    'ডোমেইন ও হাই-স্পিড হোস্টিং',
-                    'কাস্টম ওয়েবসাইট ডেভেলপমেন্ট ও ল্যান্ডিং পেজ ডিজাইন',
-                    'সিনেমাটিক UI/UX এবং ভিজ্যুয়াল আইডেন্টিটি ডিজাইন',
-                    'পুরানো ওয়েবসাইট রি-ডিজাইন ও স্ট্রাকচার আপগ্রেড',
-                    'ফুল এসইও (SEO) অপটিমাইজেশন ও গ্লোবাল স্ক্যালেবিলিটি'
+                    'ডোমেইন',
+                    'হোস্টিং',
+                    'কাস্টম ওয়েবসাইট ডেভলপমেন্ট',
+                    'ল্যান্ডিং পেজ',
+                    'এসইও অপটিমাইজড',
+                    'গ্লোবাল স্ক্যালেবিলিটি',
+                    'সিনেমাটিক ইউআই/ইউ এক্স',
+                    'ভিজ্যুয়াল আইডেন্টিটি ডিজাইন',
+                    'ওয়েবসাইট রিডিজাইন',
+                    'আপগ্রেড ওল্ড স্ট্রাকচার'
                 ],
                 graphics: [
                     'ব্র্যান্ডিং লোগো, ব্র্যান্ড আইডেন্টিটি',
@@ -293,11 +298,16 @@ export const content: Record<Language, Content> = {
                     'YouTube Premium'
                 ],
                 web: [
-                    'Domain & High-Speed Hosting',
-                    'Custom Website Development & Landing Page Design',
-                    'Cinematic UI/UX & Visual Identity Design',
-                    'Old Website Redesign & Structure Upgrade',
-                    'Full SEO Optimization & Global Scalability'
+                    'Domain',
+                    'Hosting',
+                    'Custom Website Development',
+                    'Landing Page',
+                    'SEO Optimized',
+                    'Global Scalability',
+                    'Cinematic UI/UX',
+                    'Visual Identity Design',
+                    'Website Redesign',
+                    'Upgrade Old Structure'
                 ],
                 graphics: [
                     'Professional Graphics Design',
