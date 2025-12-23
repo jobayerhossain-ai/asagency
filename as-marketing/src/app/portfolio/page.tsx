@@ -7,6 +7,9 @@ import { X, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 
 const proofs = [
+    { id: 106, src: '/proofs/featured-6.jpg', alt: 'Featured Review 6' },
+    { id: 107, src: '/proofs/featured-7.jpg', alt: 'Featured Review 7' },
+    { id: 108, src: '/proofs/featured-8.jpg', alt: 'Featured Review 8' },
     { id: 101, src: '/proofs/featured-1.jpg', alt: 'Featured Review 1' },
     { id: 102, src: '/proofs/featured-2.jpg', alt: 'Featured Review 2' },
     { id: 103, src: '/proofs/featured-3.jpg', alt: 'Featured Review 3' },
