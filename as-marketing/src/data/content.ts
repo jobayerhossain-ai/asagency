@@ -116,10 +116,10 @@ export const content: Record<Language, Content> = {
                     'ইনস্টাগ্রাম ফলোয়ার'
                 ],
                 tiktok: [
-                    'টিকটক অ্যাড ক্যাম্পেইন ও ভিডিও প্রমোট',
-                    'অর্গানিক ফলোয়ার বৃদ্ধি এবং এনগেজমেন্ট সলিউশন',
-                    'অফিশিয়াল কয়েন রিচার্জ সুবিধা',
-                    'ভাইরাল কন্টেন্ট স্ট্র্যাটেজি'
+                    'এড ক্যাম্পেইন',
+                    'ভিডিও প্রমোট (লাইক, কমেন্ট, শেয়ার, ভিউ)',
+                    'টিকটক ফলোয়ার',
+                    'কয়েন রিচার্জ'
                 ],
                 youtube: [
                     'প্রোডাক্ট মার্কেটিং ও প্রফেশনাল অ্যাড ক্যাম্পেইন',
@@ -273,10 +273,10 @@ export const content: Record<Language, Content> = {
                     'Story & Reels Promotion'
                 ],
                 tiktok: [
-                    'TikTok Ad Campaigns & Video Promotion',
-                    'Organic Follower Growth & Engagement Solutions',
-                    'Official Coin Recharge Facility',
-                    'Viral Content Strategy'
+                    'Ad Campaign',
+                    'Video Promotion (Like, Comment, Share, View)',
+                    'TikTok Followers',
+                    'Coin Recharge'
                 ],
                 youtube: [
                     'Product Marketing & Professional Ad Campaigns',
