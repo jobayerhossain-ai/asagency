@@ -1,7 +1,8 @@
 'use client';
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/context/LanguageContext';
-import { Facebook, Instagram, Video, Youtube, Code, CheckCircle2, Palette } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Code, CheckCircle2, Palette } from 'lucide-react';
+import { TikTokIcon } from '@/components/ui/BrandIcons';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/utils/animations';
 
@@ -11,7 +12,7 @@ export default function ServicesPage() {
     const serviceIcons = {
         facebook: { icon: Facebook, color: 'text-blue-600', bg: 'bg-blue-50' },
         instagram: { icon: Instagram, color: 'text-pink-600', bg: 'bg-pink-50' },
-        tiktok: { icon: Video, color: 'text-black', bg: 'bg-gray-100' },
+        tiktok: { icon: TikTokIcon, color: 'text-black', bg: 'bg-gray-100' },
         youtube: { icon: Youtube, color: 'text-red-600', bg: 'bg-red-50' },
         web: { icon: Code, color: 'text-indigo-600', bg: 'bg-indigo-50' },
         graphics: { icon: Palette, color: 'text-purple-600', bg: 'bg-purple-50' },
