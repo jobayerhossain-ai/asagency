@@ -9,7 +9,7 @@ const ServicesSnapshot = dynamic(() => import('@/components/home/ServicesSnapsho
 
 const TrustSection = dynamic(() => import('@/components/home/TrustSection').then(mod => mod.TrustSection));
 
-const CeoSection = dynamic(() => import('@/components/home/CeoSection').then(mod => mod.CeoSection));
+const TeamSection = dynamic(() => import('@/components/home/TeamSection').then(mod => mod.TeamSection));
 const MapSection = dynamic(() => import('@/components/home/MapSection').then(mod => mod.MapSection));
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       <ReviewSlider />
       <ServicesSnapshot />
       <TrustSection />
-      <CeoSection />
+      <TeamSection />
       <MapSection />
     </div>
   );

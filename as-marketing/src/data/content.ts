@@ -70,6 +70,10 @@ export interface Content {
         quote: string;
         description: string;
     };
+    team: {
+        title: string;
+        subtitle: string;
+    };
 }
 
 export const content: Record<Language, Content> = {
@@ -244,6 +248,10 @@ export const content: Record<Language, Content> = {
             quote: 'সফলতা শুধু লক্ষ্য নয়, এটি একটি যাত্রা।',
             description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
         },
+        team: {
+            title: 'আমাদের টিম',
+            subtitle: 'আমাদের দক্ষ এক্সপার্ট টিমের সাথে পরিচিত হোন'
+        },
     },
     en: {
         nav: {
@@ -410,6 +418,10 @@ export const content: Record<Language, Content> = {
             role: 'CEO & Founder',
             quote: 'Success is not just a goal, it\'s a journey.',
             description: 'I founded AS Marketing Business with a vision to unlock new horizons of business success through world-class digital marketing services. Our goal is to ensure the best results and long-term success for every client.'
+        },
+        team: {
+            title: 'Our Team',
+            subtitle: 'Meet our expert team members'
         },
     },
 };
