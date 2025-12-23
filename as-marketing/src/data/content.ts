@@ -182,6 +182,10 @@ export const content: Record<Language, Content> = {
                     title: 'সরকারিভাবে অনুমোদিত',
                     desc: 'আমরা একটি সরকার অনুমোদিত আইটি কোম্পানি (ট্রেড লাইসেন্স নং: ০৭৬১৪)। আপনার বিশ্বাস ও নিরাপত্তাই আমাদের প্রধান লক্ষ্য।',
                     image: '/license.png'
+                },
+                {
+                    title: '২৪/৭ সাপোর্ট',
+                    desc: 'আমরা সপ্তাহে ৭ দিন এবং ২৪ ঘন্টা সেবা প্রদান করি, যাতে আপনার ব্যবসার প্রবৃদ্ধি কখনোই থেমে না থাকে।'
                 }
             ],
             viewLicense: 'লাইসেন্স দেখুন',
@@ -345,6 +349,10 @@ export const content: Record<Language, Content> = {
                     title: 'Government Approved',
                     desc: 'We are a government registered IT agency (Trade License No: ...). Your trust and security is our main goal.',
                     image: '/license.png'
+                },
+                {
+                    title: '24/7 Support Service',
+                    desc: 'We provide support 24 hours a day, 7 days a week, ensuring your business growth never stops.'
                 }
             ],
             viewLicense: 'View License',
