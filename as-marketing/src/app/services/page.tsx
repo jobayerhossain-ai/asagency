@@ -41,22 +41,24 @@ export default function ServicesPage() {
 
                         return (
                             <motion.div key={category} variants={fadeInUp}>
-                                <Card className="p-8 h-full hover:border-brand-sky">
-                                    <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
-                                        <div className={`p-3 rounded-xl ${style.bg} ${style.color}`}>
+                                <Card className="p-0 h-full hover:border-brand-sky overflow-hidden bg-white">
+                                    <div className="bg-green-200 p-6 flex items-center gap-4 border-b border-green-300">
+                                        <div className={`p-3 rounded-xl bg-white shadow-sm ${style.color}`}>
                                             <Icon size={32} />
                                         </div>
-                                        <h2 className="text-2xl font-bold text-heading bg-green-200 px-4 py-2 rounded-lg border border-green-300 flex-1">{title}</h2>
+                                        <h2 className="text-2xl font-bold text-heading">{title}</h2>
                                     </div>
 
-                                    <ul className="space-y-3">
-                                        {details.map((item: string, idx: number) => (
-                                            <li key={idx} className="flex items-start gap-3 text-body">
-                                                <CheckCircle2 size={20} className="text-brand-neon shrink-0 mt-0.5" />
-                                                <span>{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <div className="p-8">
+                                        <ul className="space-y-3">
+                                            {details.map((item: string, idx: number) => (
+                                                <li key={idx} className="flex items-start gap-3 text-body">
+                                                    <CheckCircle2 size={20} className="text-brand-neon shrink-0 mt-0.5" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </Card>
                             </motion.div>
                         );
