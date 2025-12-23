@@ -54,7 +54,7 @@ export const ReviewSlider = () => {
                                         src={review.src}
                                         alt={review.alt}
                                         fill
-                                        className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                                        className="object-contain p-2 hover:scale-105 transition-transform duration-700 ease-out"
                                         sizes="(max-width: 768px) 280px, 350px"
                                     />
                                 </div>

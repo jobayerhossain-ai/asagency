@@ -74,7 +74,7 @@ export default function PortfolioPage() {
                                     src={proof.src}
                                     alt={proof.alt}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="object-contain p-1 transition-transform duration-700 group-hover:scale-110"
                                 />
                             </div>
 
