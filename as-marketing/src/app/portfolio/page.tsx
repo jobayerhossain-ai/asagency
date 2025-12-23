@@ -7,6 +7,11 @@ import { X, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 
 const proofs = [
+    { id: 101, src: '/proofs/featured-1.jpg', alt: 'Featured Review 1' },
+    { id: 102, src: '/proofs/featured-2.jpg', alt: 'Featured Review 2' },
+    { id: 103, src: '/proofs/featured-3.jpg', alt: 'Featured Review 3' },
+    { id: 104, src: '/proofs/featured-4.jpg', alt: 'Featured Review 4' },
+    { id: 105, src: '/proofs/featured-5.jpg', alt: 'Featured Review 5' },
     { id: 1, src: '/proofs/success-1.jpg', alt: 'Success Proof 1' },
     { id: 2, src: '/proofs/success-2.jpg', alt: 'Success Proof 2' },
     { id: 3, src: '/proofs/success-3.jpg', alt: 'Success Proof 3' },
