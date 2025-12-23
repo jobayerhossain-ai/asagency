@@ -163,8 +163,15 @@ export const ServicesSnapshot = () => {
                         isOpen={!!selectedPaymentMethod}
                         onClose={() => setSelectedPaymentMethod(null)}
                         method={selectedPaymentMethod as any}
-                        number={selectedPaymentMethod === 'bkash' || selectedPaymentMethod === 'rocket' ? "01747980662" : "01626724262"}
-                        qrImage={selectedPaymentMethod === 'bkash' ? '/bkash-qr.jpg' : (selectedPaymentMethod === 'nagad' ? '/nagad-qr.jpg' : undefined)}
+                        number={
+                            selectedPaymentMethod === 'bkash' || selectedPaymentMethod === 'rocket' ? "01747980662" :
+                                selectedPaymentMethod === 'nagad' ? "01626724262" : undefined
+                        }
+                        qrImage={
+                            selectedPaymentMethod === 'bkash' ? '/bkash-qr.jpg' :
+                                selectedPaymentMethod === 'nagad' ? '/nagad-qr.jpg' :
+                                    selectedPaymentMethod === 'npsb' ? '/city-bank-qr.jpg' : undefined
+                        }
                     />
                 )}
             </div>

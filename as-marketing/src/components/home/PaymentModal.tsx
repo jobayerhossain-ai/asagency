@@ -8,7 +8,7 @@ import Image from 'next/image';
 interface PaymentModalProps {
     isOpen: boolean;
     onClose: () => void;
-    method: 'bkash' | 'nagad' | 'rocket' | 'bank';
+    method: 'bkash' | 'nagad' | 'rocket' | 'bank' | 'npsb';
     number?: string;
     qrImage?: string;
 }
@@ -45,6 +45,14 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                     "রেফারেন্স হিসেবে আপনার নাম দিন",
                     "PIN দিয়ে পেমেন্ট কনফার্ম করুন"
                 ];
+            case 'npsb':
+                return [
+                    "আপনার ব্যাংক অ্যাপ (যেমন CityTouch) বা পেমেন্ট অ্যাপ ওপেন করুন",
+                    "Bangla QR বা NPSB পেমেন্ট অপশন সিলেক্ট করুন",
+                    "নিচের QR কোডটি স্ক্যান করুন",
+                    "টাকার পরিমাণ উল্লেখ করুন",
+                    "পেমেন্ট কনফার্ম করুন"
+                ];
             default:
                 return [];
         }
@@ -55,7 +63,8 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
         bkash: 'bg-[#E2136E]',
         nagad: 'bg-[#F7941D]',
         rocket: 'bg-[#8D368D]',
-        bank: 'bg-[#005C9D]'
+        bank: 'bg-[#005C9D]',
+        npsb: 'bg-[#005C9D]'
     };
 
     return (
