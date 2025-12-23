@@ -61,7 +61,7 @@ export const TrustSection = () => {
                                         alt="License"
                                         className="w-auto max-w-full mx-auto block h-48 object-contain rounded-lg"
                                     />
-                                    <p className="text-center text-xs text-slate-400 mt-2">Verified Document</p>
+                                    <p className="text-center text-xs text-slate-400 mt-2">ট্রেড লাইসেন্স</p>
                                 </div>
                             )}
                         </Card>

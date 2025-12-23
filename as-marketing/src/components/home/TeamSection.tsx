@@ -9,29 +9,143 @@ import { Quote, Briefcase, BadgeCheck, Fingerprint } from 'lucide-react';
 // Mock Data for Team Members (14 members)
 const generateTeamMembers = () => {
     const roles = [
-        'Operations Manager',
-        'Senior Web Developer',
-        'Head of Digital Marketing',
-        'Creative Director',
-        'SEO Specialist',
-        'Content Manager',
-        'Social Media Strategist',
-        'Senior Graphic Designer',
-        'Video Production Lead',
-        'Client Relations Manager',
-        'Performance Marketer',
-        'Support Lead',
-        'Business Development',
-        'Technical Specialist'
+        'Operations Manager', // 002
+        'Senior Web Developer', // 003
+        'Head of Digital Marketing', // 004
+        'Creative Director', // 005
+        'Meta Ads Expert', // 006 (Inzi Haq)
+        'Content Manager', // 007
+        'Social Media Strategist', // 008
+        'Senior Graphic Designer', // 009
+        'Video Production Lead', // 010
+        'Client Relations Manager', // 011
+        'Performance Marketer', // 012
+        'Support Lead', // 013
+        'Business Development', // 014
+        'Technical Specialist' // 015
     ];
 
-    return roles.map((role, idx) => ({
-        id: `AS-${100 + (idx + 1)}`,
-        name: `Team Member ${idx + 1}`,
-        role: role,
-        // Using distinct seeds for avatars
-        image: `https://api.dicebear.com/7.x/micah/svg?seed=AS${idx}&backgroundColor=b6e3f4,c0aede,d1d4f9`
-    }));
+    return roles.map((role, idx) => {
+        const idNumber = idx + 2; // Start from 002 (CEO is 001)
+        const idString = idNumber.toString().padStart(3, '0');
+        const id = `AS-${idString}`;
+
+        // Specific overrides
+        if (id === 'AS-002') {
+            return {
+                id,
+                name: 'Shawon Ahmed',
+                role: 'Meta Ads Expert (Facebook)',
+                image: '/team-shawon-ahmed.jpg'
+            };
+        }
+
+        if (id === 'AS-003') {
+            return {
+                id,
+                name: 'Md Abdul Al Galib',
+                role: 'Meta Ads Expert (Facebook)',
+                image: '/team-galib.png'
+            };
+        }
+
+        if (id === 'AS-004') {
+            return {
+                id,
+                name: 'Md Amenol',
+                role: 'Head of Marketing',
+                image: '/team-amenol.png'
+            };
+        }
+
+        if (id === 'AS-006') {
+            return {
+                id,
+                name: 'Inzi Haq',
+                role: 'Meta Ads Expert',
+                image: '/team-inzi-haq.jpg'
+            };
+        }
+
+        if (id === 'AS-008') {
+            return {
+                id,
+                name: 'Jaidul Islam',
+                role: 'Meta Ads Expert (Instagram)',
+                image: '/team-jaidul.png'
+            };
+        }
+
+        if (id === 'AS-009') {
+            return {
+                id,
+                name: 'Tahmid Sadiq',
+                role: 'Meta Ads Expert (Instagram)',
+                image: '/team-tahmid.jpg'
+            };
+        }
+
+        if (id === 'AS-010') {
+            return {
+                id,
+                name: 'Jobayer Hossain',
+                role: 'Web Designer and Developer',
+                image: '/team-jobayer.png'
+            };
+        }
+
+        if (id === 'AS-011') {
+            return {
+                id,
+                name: 'Md Mehedi Hasan',
+                role: 'Graphics Designer',
+                image: `https://api.dicebear.com/7.x/micah/svg?seed=AS011&backgroundColor=b6e3f4,c0aede,d1d4f9`
+            };
+        }
+
+        if (id === 'AS-012') {
+            return {
+                id,
+                name: 'Abdullah Al Shafi',
+                role: 'Tiktok Ads Expert',
+                image: '/team-abdullah.png'
+            };
+        }
+
+        if (id === 'AS-013') {
+            return {
+                id,
+                name: 'SM Prithibi Rahman',
+                role: 'Google Ads Expert (YouTube Marketing)',
+                image: '/team-prithibi.png'
+            };
+        }
+
+        if (id === 'AS-014') {
+            return {
+                id,
+                name: 'Md Shawon Hosse',
+                role: 'Ads Analyzer',
+                image: '/team-shawon.png'
+            };
+        }
+
+        if (id === 'AS-015') {
+            return {
+                id,
+                name: 'Shajid Ahmed',
+                role: 'Manager',
+                image: '/team-shajid-ahmed.png'
+            };
+        }
+
+        return {
+            id,
+            name: `Team Member ${idNumber}`,
+            role: role,
+            image: `https://api.dicebear.com/7.x/micah/svg?seed=AS${idx}&backgroundColor=b6e3f4,c0aede,d1d4f9`
+        };
+    });
 };
 
 const TEAM_MEMBERS = generateTeamMembers();
