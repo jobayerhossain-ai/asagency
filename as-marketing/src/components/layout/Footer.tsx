@@ -91,7 +91,9 @@ export const Footer = () => {
                         </h4>
                         <ul className="space-y-2">
                             <FooterLink href="/about">{t.nav.about}</FooterLink>
-                            <FooterLink href="/proofs">প্রুফ দেখুন (Success Proofs)</FooterLink>
+                            <FooterLink href="/license">
+                                লাইসেন্স দেখুন <span className="text-blue-600 font-semibold">(এখানে ক্লিক করুন)</span>
+                            </FooterLink>
                             <FooterLink href="/portfolio">{t.nav.reviews}</FooterLink>
                             <FooterLink href="/contact">{t.nav.contact}</FooterLink>
                         </ul>
