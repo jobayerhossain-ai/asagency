@@ -6,8 +6,10 @@ import { FacebookIcon, InstagramIcon, TikTokIcon } from '@/components/ui/BrandIc
 import { Card } from '@/components/ui/Card';
 import { packages } from '@/data/packages';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function PricingPage() {
+    const { t } = useLanguage();
     const [activeTab, setActiveTab] = useState(packages[0].id);
 
     const getIcon = (id: string) => {
@@ -22,7 +24,7 @@ export default function PricingPage() {
     const activeCategory = packages.find(p => p.id === activeTab);
 
     const handleOrder = (pkgTitle: string, optionName: string, price: string) => {
-        const message = `Halo, I would like to order:
+        const message = `${t.pricing.whatsappMessage}:
 Package: ${pkgTitle}
 Option: ${optionName}
 Price: ${price}
@@ -44,7 +46,7 @@ Please provide details.`;
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-bold text-heading mb-4"
                     >
-                        আমাদের প্যাকেজ সমূহ
+                        {t.pricing.title}
                     </motion.h1>
                     <motion.div
                         initial={{ width: 0 }}
@@ -116,7 +118,7 @@ Please provide details.`;
                                                     <button
                                                         onClick={() => handleOrder(sub.title, opt.name, opt.price)}
                                                         className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600 hover:bg-green-500 hover:text-white transition-all shadow-sm"
-                                                        title="Order on WhatsApp"
+                                                        title={t.tooltips.orderWhatsapp}
                                                     >
                                                         <MessageCircle size={16} />
                                                     </button>
@@ -128,7 +130,7 @@ Please provide details.`;
                                     {sub.note && (
                                         <div className="mt-auto bg-yellow-50 p-4 rounded-xl border border-yellow-100">
                                             <p className="text-sm text-slate-700 leading-relaxed">
-                                                <span className="font-bold text-yellow-800 block mb-1">নোট:</span>
+                                                <span className="font-bold text-yellow-800 block mb-1">{t.pricing.noteLabel}</span>
                                                 {sub.note}
                                             </p>
                                         </div>

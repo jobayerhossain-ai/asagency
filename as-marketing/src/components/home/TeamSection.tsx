@@ -106,9 +106,9 @@ const generateTeamMembers = () => {
         if (id === 'AS-012') {
             return {
                 id,
-                name: 'Abdullah Al Shafi',
+                name: 'Md Abdus Saif',
                 role: 'Tiktok Ads Expert',
-                image: '/team-abdullah.png'
+                image: '/team-abdus-saif.png'
             };
         }
 
@@ -139,6 +139,7 @@ const generateTeamMembers = () => {
             };
         }
 
+
         return {
             id,
             name: `Team Member ${idNumber}`,
@@ -162,15 +163,17 @@ export const TeamSection = () => {
             whileHover={{ y: -5 }}
             className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-100 border border-slate-100 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-xl hover:border-brand-neon/30"
         >
-            <div className="relative w-24 h-24 mb-4 rounded-full p-1 bg-gradient-to-br from-slate-100 to-white border border-slate-100 group-hover:border-brand-neon/50 transition-colors">
-                <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={96}
-                    height={96}
-                    className="rounded-full object-cover"
-                />
-                <div className="absolute bottom-0 right-0 p-1 bg-green-500 rounded-full border-2 border-white" title="Active"></div>
+            <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-white border-2 border-slate-100 group-hover:border-brand-neon/50 transition-colors">
+                <div className="relative w-full h-full">
+                    <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover object-center"
+                        sizes="96px"
+                    />
+                </div>
+                <div className="absolute bottom-0 right-0 p-1 bg-green-500 rounded-full border-2 border-white z-10" title={t.tooltips.active}></div>
             </div>
 
             <h4 className="font-bold text-lg text-heading mb-1 group-hover:text-brand-neon transition-colors">
@@ -258,7 +261,15 @@ export const TeamSection = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-heading to-slate-600 mb-2">
+                                    <h3
+                                        className="text-4xl md:text-5xl font-extrabold mb-2"
+                                        style={{
+                                            color: '#000000',
+                                            WebkitTextFillColor: '#000000',
+                                            background: 'none',
+                                            backgroundImage: 'none'
+                                        }}
+                                    >
                                         {t.ceo.name}
                                     </h3>
                                     <p className="text-xl md:text-2xl text-brand-neon font-bold flex items-center justify-center md:justify-start gap-3">

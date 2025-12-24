@@ -6,84 +6,107 @@ import { useLanguage } from '@/context/LanguageContext';
 import { Quote } from 'lucide-react';
 
 export const CeoSection = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
-        <section className="relative py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50">
-            <div className="container mx-auto px-4 md:px-6">
-                {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-heading mb-4">
-                        {t.ceo.title}
-                    </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-brand-neon to-purple-500 mx-auto rounded-full" />
-                </div>
+        <section className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+            {/* Premium Background Elements */}
+            <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+                <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000" />
+            </div>
 
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 {/* CEO Content */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
-                    {/* Image Side - Optimized Premium Shape */}
-                    <div className="flex justify-center lg:justify-end order-1">
-                        <div className="relative group">
-                            {/* Static gradient border */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-neon via-purple-500 to-pink-500 rounded-[2rem] opacity-20" />
-
-                            {/* Main image container */}
-                            <div className="relative bg-white p-2 rounded-[2rem] shadow-xl transition-all duration-300 group-hover:shadow-2xl">
-                                {/* Frame */}
-                                <div className="relative rounded-[1.75rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 p-1">
-                                    {/* CEO Image */}
-                                    <div className="relative w-80 h-96 md:w-96 md:h-[28rem] rounded-[1.5rem] overflow-hidden">
-                                        <Image
-                                            src="/ceo-new.png"
-                                            alt={t.ceo.name}
-                                            fill
-                                            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                                            priority
-                                        />
-                                        {/* Subtle overlay on hover */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-brand-neon/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Subtle accent */}
-                            <div className="absolute -top-3 -right-3 w-16 h-16 bg-brand-neon/20 rounded-full blur-xl" />
-                        </div>
-                    </div>
-
-                    {/* Content Side */}
-                    <div className="space-y-6 order-2">
-                        {/* Quote */}
-                        <div className="relative">
-                            <Quote className="absolute -top-2 -left-2 w-12 h-12 text-brand-neon/20" />
-                            <blockquote className="relative pl-10 text-2xl md:text-3xl font-bold text-heading italic leading-tight">
-                                "{t.ceo.quote}"
-                            </blockquote>
-                        </div>
-
+                    {/* Content Side - Left */}
+                    <div className="space-y-8 order-2 lg:order-1">
                         {/* Name & Role */}
-                        <div className="space-y-2">
-                            <h3 className="text-3xl md:text-4xl font-bold text-heading">
-                                {t.ceo.name}
-                            </h3>
-                            <p className="text-lg md:text-xl text-brand-neon font-semibold flex items-center gap-2">
-                                <span className="w-12 h-0.5 bg-brand-neon" />
+                        <div className="space-y-4">
+                            {/* Hardcoded name in black - Bengali/English based on language */}
+                            {language === 'bn' ? (
+                                <h3 style={{
+                                    fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                                    fontWeight: 700,
+                                    color: '#000000',
+                                    margin: 0,
+                                    padding: 0,
+                                    letterSpacing: '-0.02em',
+                                    lineHeight: 1.2,
+                                    WebkitTextFillColor: '#000000',
+                                    textShadow: 'none',
+                                    background: 'transparent'
+                                }}>
+                                    সোহানুর রহমান
+                                </h3>
+                            ) : (
+                                <h3 style={{
+                                    fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                                    fontWeight: 700,
+                                    color: '#000000',
+                                    margin: 0,
+                                    padding: 0,
+                                    letterSpacing: '-0.02em',
+                                    lineHeight: 1.2,
+                                    WebkitTextFillColor: '#000000',
+                                    textShadow: 'none',
+                                    background: 'transparent'
+                                }}>
+                                    Sohanur Rahman
+                                </h3>
+                            )}
+                            <p className="text-xl md:text-2xl text-brand-neon font-semibold">
                                 {t.ceo.role}
                             </p>
                         </div>
 
                         {/* Description */}
-                        <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+                        <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
                             {t.ceo.description}
                         </p>
 
-                        {/* Decorative badges */}
+                        {/* Quote */}
+                        <div className="relative border-l-4 border-brand-neon pl-6 py-2">
+                            <blockquote className="text-xl md:text-2xl font-semibold text-white italic leading-tight">
+                                "{t.ceo.quote}"
+                            </blockquote>
+                        </div>
+
+                        {/* Social Links / Badges */}
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <div className="px-6 py-3 bg-gradient-to-r from-brand-neon to-purple-500 text-white rounded-full shadow-lg shadow-brand-neon/30 font-semibold text-sm transition-transform hover:scale-105">
+                            <div className="px-6 py-3 bg-gradient-to-r from-brand-neon to-blue-600 text-white rounded-lg shadow-xl shadow-brand-neon/30 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                                 🏆 Award Winning Leader
                             </div>
-                            <div className="px-6 py-3 bg-white border-2 border-brand-neon/20 text-brand-neon rounded-full shadow-md font-semibold text-sm transition-transform hover:scale-105 hover:border-brand-neon/50">
+                            <div className="px-6 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600 text-white rounded-lg shadow-lg font-semibold text-sm transition-all duration-300 hover:scale-105 hover:bg-slate-700">
                                 ✨ Visionary Founder
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Image Side - Right */}
+                    <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+                        <div className="relative group">
+                            {/* Glow effect */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-neon/30 via-blue-500/20 to-purple-500/30 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                            {/* Main image container */}
+                            <div className="relative bg-gradient-to-br from-slate-700 to-slate-800 p-1.5 rounded-3xl shadow-2xl transition-all duration-500 group-hover:shadow-brand-neon/50 group-hover:-translate-y-2">
+                                <div className="relative w-80 h-96 md:w-96 md:h-[28rem] rounded-[1.4rem] overflow-hidden">
+                                    <Image
+                                        src="/ceo-new.png"
+                                        alt={t.ceo.name}
+                                        fill
+                                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                        priority
+                                    />
+                                    {/* Gradient overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
+                                </div>
+                            </div>
+
+                            {/* Badge */}
+                            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-neon to-blue-600 text-white px-6 py-3 rounded-full shadow-xl shadow-brand-neon/40 font-bold text-sm whitespace-nowrap">
+                                {t.ceo.role}
                             </div>
                         </div>
                     </div>

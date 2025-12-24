@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface PaymentModalProps {
     isOpen: boolean;
@@ -14,45 +15,20 @@ interface PaymentModalProps {
 }
 
 export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: PaymentModalProps) => {
+    const { t } = useLanguage();
+
     if (!isOpen) return null;
 
     const getInstructions = () => {
         switch (method) {
             case 'bkash':
-                return [
-                    "আপনার বিকাশ অ্যাপ ওপেন করুন",
-                    "পেমেন্ট (Payment) অপশন সিলেক্ট করুন",
-                    "নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন",
-                    "টাকার পরিমাণ উল্লেখ করুন",
-                    "রেফারেন্স হিসেবে আপনার নাম দিন",
-                    "PIN দিয়ে পেমেন্ট কনফার্ম করুন"
-                ];
+                return t.payment.instructions.bkash;
             case 'nagad':
-                return [
-                    "আপনার নগদ অ্যাপ ওপেন করুন",
-                    "পেমেন্ট (Payment) অপশন সিলেক্ট করুন",
-                    "নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন",
-                    "টাকার পরিমাণ উল্লেখ করুন",
-                    "রেফারেন্স হিসেবে আপনার নাম দিন",
-                    "PIN দিয়ে পেমেন্ট কনফার্ম করুন"
-                ];
+                return t.payment.instructions.nagad;
             case 'rocket':
-                return [
-                    "আপনার রকেট অ্যাপ ওপেন করুন",
-                    "মার্চেন্ট পে (Merchant Pay) অপশন সিলেক্ট করুন",
-                    "নিচে দেওয়া মার্চেন্ট নাম্বারটি টাইপ করুন",
-                    "টাকার পরিমাণ উল্লেখ করুন",
-                    "রেফারেন্স হিসেবে আপনার নাম দিন",
-                    "PIN দিয়ে পেমেন্ট কনফার্ম করুন"
-                ];
+                return t.payment.instructions.rocket;
             case 'npsb':
-                return [
-                    "আপনার ব্যাংক অ্যাপ (যেমন CityTouch) বা পেমেন্ট অ্যাপ ওপেন করুন",
-                    "Bangla QR বা NPSB পেমেন্ট অপশন সিলেক্ট করুন",
-                    "নিচের QR কোডটি স্ক্যান করুন",
-                    "টাকার পরিমাণ উল্লেখ করুন",
-                    "পেমেন্ট কনফার্ম করুন"
-                ];
+                return t.payment.instructions.npsb;
             default:
                 return [];
         }
@@ -85,7 +61,7 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                 >
                     {/* Header */}
                     <div className={`${colors[method]} p-4 flex justify-between items-center text-white`}>
-                        <h3 className="text-xl font-bold capitalize">{method} পেমেন্ট ইন্সট্রাকশন</h3>
+                        <h3 className="text-xl font-bold capitalize">{method} {t.payment.modalTitle}</h3>
                         <button onClick={onClose} className="p-1 hover:bg-white/20 rounded-full transition-colors">
                             <X size={24} />
                         </button>
@@ -95,7 +71,7 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                         {/* Number Display */}
                         {number && (
                             <div className="text-center mb-6">
-                                <p className="text-slate-500 mb-1">মার্চেন্ট নাম্বার</p>
+                                <p className="text-slate-500 mb-1">{t.payment.merchantNumber}</p>
                                 <div className="text-2xl md:text-3xl font-bold text-heading font-mono bg-slate-50 py-3 rounded-lg border border-slate-100 select-all">
                                     {number}
                                 </div>
@@ -104,7 +80,7 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
 
                         {/* Instructions List */}
                         <div className="mb-8">
-                            <h4 className="font-bold text-lg mb-4 text-heading border-b border-gray-100 pb-2">কিভাবে পেমেন্ট করবেন:</h4>
+                            <h4 className="font-bold text-lg mb-4 text-heading border-b border-gray-100 pb-2">{t.payment.howToPay}</h4>
                             <ul className="space-y-3">
                                 {instructions.map((step, idx) => (
                                     <li key={idx} className="flex items-start gap-3 text-slate-700">
@@ -120,7 +96,7 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                         {/* QR Code */}
                         {qrImage && (
                             <div className="flex flex-col items-center">
-                                <p className="text-sm text-slate-500 mb-3 font-medium">সরাসরি স্ক্যান করুন</p>
+                                <p className="text-sm text-slate-500 mb-3 font-medium">{t.payment.scanDirectly}</p>
                                 <div className="p-2 border-2 border-dashed border-gray-200 rounded-xl">
                                     <Image
                                         src={qrImage}

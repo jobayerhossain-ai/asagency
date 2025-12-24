@@ -35,12 +35,15 @@ export interface Content {
             web: string[];
             graphics: string[];
         };
+        seeDetails: string;
     };
     trust: {
         title: string;
         description: string;
         points: { title: string; desc: string; image?: string; }[];
         viewLicense: string;
+        tradeLicenseCaption: string;
+        licenseClickHere: string;
     };
     proofs: {
         title: string;
@@ -62,6 +65,7 @@ export interface Content {
     };
     footer: {
         rights: string;
+        followUs: string;
     };
     ceo: {
         title: string;
@@ -73,6 +77,51 @@ export interface Content {
     team: {
         title: string;
         subtitle: string;
+    };
+    contact: {
+        phoneWhatsapp: string;
+        callNow: string;
+        chatWhatsApp: string;
+        emailUs: string;
+        sendEmail: string;
+        visitOffice: string;
+        followSocial: string;
+        whatsappTooltip: string;
+        phoneTitle: string;
+        whatsappTitle: string;
+        address: string;
+    };
+    payment: {
+        modalTitle: string;
+        merchantNumber: string;
+        howToPay: string;
+        scanDirectly: string;
+        methodsTitle: string;
+        clickToPay: string;
+        instructions: {
+            bkash: string[];
+            nagad: string[];
+            rocket: string[];
+            npsb: string[];
+        };
+    };
+    pricing: {
+        title: string;
+        whatsappMessage: string;
+        noteLabel: string;
+    };
+    about: {
+        thankYouMessage: string;
+    };
+    license: {
+        title: string;
+        description: string;
+    };
+    tooltips: {
+        active: string;
+        orderWhatsapp: string;
+        officeLocation: string;
+        googleMap: string;
     };
 }
 
@@ -104,6 +153,7 @@ export const content: Record<Language, Content> = {
                 web: 'ওয়েবসাইট সলিউশন',
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
+            seeDetails: 'বিস্তারিত দেখুন →',
             details: {
                 facebook: [
                     'এড ক্যাম্পেইন',
@@ -193,6 +243,8 @@ export const content: Record<Language, Content> = {
                 }
             ],
             viewLicense: 'লাইসেন্স দেখুন',
+            tradeLicenseCaption: 'ট্রেড লাইসেন্স',
+            licenseClickHere: '(এখানে ক্লিক করুন)',
         },
         proofs: {
             title: 'ক্লায়েন্ট রিভিউ (Client Reviews)',
@@ -240,6 +292,7 @@ export const content: Record<Language, Content> = {
         },
         footer: {
             rights: '© ২০২০-২০২৫ AS Marketing Business. সর্বস্বত্ব সংরক্ষিত।',
+            followUs: 'আমাদের অনুসরণ করুন',
         },
         ceo: {
             title: 'আমাদের নেতৃত্ব',
@@ -251,6 +304,78 @@ export const content: Record<Language, Content> = {
         team: {
             title: 'আমাদের টিম',
             subtitle: 'আমাদের দক্ষ এক্সপার্ট টিমের সাথে পরিচিত হোন'
+        },
+        contact: {
+            phoneWhatsapp: 'ফোন / হোয়াটসঅ্যাপ',
+            callNow: 'এখনই কল করুন',
+            chatWhatsApp: 'হোয়াটসঅ্যাপ এ মেসেজ করুন',
+            emailUs: 'ইমেইল করুন',
+            sendEmail: 'ইমেইল পাঠান',
+            visitOffice: 'আমাদের অফিসে আসুন',
+            followSocial: 'সোশ্যাল মিডিয়ায় ফলো করুন',
+            whatsappTooltip: 'হোয়াটসঅ্যাপ এ যোগাযোগ করুন',
+            phoneTitle: 'ফোন করুন',
+            whatsappTitle: 'হোয়াটসঅ্যাপ',
+            address: 'কাস্টমস মোড়, কুষ্টিয়া সদর',
+        },
+        payment: {
+            modalTitle: 'পেমেন্ট ইন্সট্রাকশন',
+            merchantNumber: 'মার্চেন্ট নাম্বার',
+            howToPay: 'কিভাবে পেমেন্ট করবেন:',
+            scanDirectly: 'সরাসরি স্ক্যান করুন',
+            methodsTitle: 'পেমেন্ট মেথড',
+            clickToPay: 'পেমেন্ট করতে ক্লিক করুন',
+            instructions: {
+                bkash: [
+                    'আপনার বিকাশ অ্যাপ ওপেন করুন',
+                    'পেমেন্ট (Payment) অপশন সিলেক্ট করুন',
+                    'নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন',
+                    'টাকার পরিমাণ উল্লেখ করুন',
+                    'রেফারেন্স হিসেবে আপনার নাম দিন',
+                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                ],
+                nagad: [
+                    'আপনার নগদ অ্যাপ ওপেন করুন',
+                    'পেমেন্ট (Payment) অপশন সিলেক্ট করুন',
+                    'নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন',
+                    'টাকার পরিমাণ উল্লেখ করুন',
+                    'রেফারেন্স হিসেবে আপনার নাম দিন',
+                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                ],
+                rocket: [
+                    'আপনার রকেট অ্যাপ ওপেন করুন',
+                    'মার্চেন্ট পে (Merchant Pay) অপশন সিলেক্ট করুন',
+                    'নিচে দেওয়া মার্চেন্ট নাম্বারটি টাইপ করুন',
+                    'টাকার পরিমাণ উল্লেখ করুন',
+                    'রেফারেন্স হিসেবে আপনার নাম দিন',
+                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                ],
+                npsb: [
+                    'আপনার ব্যাংক অ্যাপ (যেমন CityTouch) বা পেমেন্ট অ্যাপ ওপেন করুন',
+                    'Bangla QR বা NPSB পেমেন্ট অপশন সিলেক্ট করুন',
+                    'নিচের QR কোডটি স্ক্যান করুন',
+                    'টাকার পরিমাণ উল্লেখ করুন',
+                    'পেমেন্ট কনফার্ম করুন'
+                ]
+            }
+        },
+        pricing: {
+            title: 'আমাদের প্যাকেজ সমূহ',
+            whatsappMessage: 'হ্যালো, আমি অর্ডার করতে চাই',
+            noteLabel: 'নোট:'
+        },
+        about: {
+            thankYouMessage: 'ধন্যবাদ আপনার মূল্যবান সময় দিয়ে আমাদের সম্পর্কে জানার জন্য। আপনার ব্যবসার ডিজিটাল যাত্রাকে সফল করতে আমরা আছি আপনার পাশে।'
+        },
+        license: {
+            title: 'আমাদের সরকারি ট্রেড লাইসেন্স ও অনুমোদন',
+            description: 'আমরা একটি সম্পূর্ণ অনুমোদিত এবং নিবন্ধিত আইটি প্রতিষ্ঠান। আপনার ব্যবসায়িক নিরাপত্তা এবং বিশ্বাস আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ। নিচে আমাদের ২০২৫-২০২৬ অর্থ বছরের নবায়নকৃত ট্রেড লাইসেন্স প্রদর্শিত হলো।'
+        },
+        tooltips: {
+            active: 'সক্রিয়',
+            orderWhatsapp: 'WhatsApp এ অর্ডার করুন',
+            officeLocation: 'অফিসের লোকেশন',
+            googleMap: 'গুগল ম্যাপ - AS Marketing Business'
         },
     },
     en: {
@@ -280,6 +405,7 @@ export const content: Record<Language, Content> = {
                 web: 'Website Solutions',
                 graphics: 'Design & Branding',
             },
+            seeDetails: 'See Details →',
             details: {
                 facebook: [
                     'Targeted Ad Campaigns & Professional Ad Setup',
@@ -364,6 +490,8 @@ export const content: Record<Language, Content> = {
                 }
             ],
             viewLicense: 'View License',
+            tradeLicenseCaption: 'Trade License',
+            licenseClickHere: '(Click Here)',
         },
         proofs: {
             title: 'Client Reviews',
@@ -411,6 +539,7 @@ export const content: Record<Language, Content> = {
         },
         footer: {
             rights: '© 2020-2025 AS Marketing Business. All rights reserved.',
+            followUs: 'Follow Us',
         },
         ceo: {
             title: 'Our Leadership',
@@ -422,6 +551,78 @@ export const content: Record<Language, Content> = {
         team: {
             title: 'Our Team',
             subtitle: 'Meet our expert team members'
+        },
+        contact: {
+            phoneWhatsapp: 'Phone / WhatsApp',
+            callNow: 'Call Now',
+            chatWhatsApp: 'Chat on WhatsApp',
+            emailUs: 'Email Us',
+            sendEmail: 'Send Email',
+            visitOffice: 'Visit Our Office',
+            followSocial: 'Follow Us On Social Media',
+            whatsappTooltip: 'Connect on WhatsApp',
+            phoneTitle: 'Phone',
+            whatsappTitle: 'WhatsApp',
+            address: 'Customs mor, Kushtia Sadar',
+        },
+        payment: {
+            modalTitle: 'Payment Instructions',
+            merchantNumber: 'Merchant Number',
+            howToPay: 'How to Pay:',
+            scanDirectly: 'Scan Directly',
+            methodsTitle: 'Payment Methods',
+            clickToPay: 'Click to Pay',
+            instructions: {
+                bkash: [
+                    'Open your bKash app',
+                    'Select Payment option',
+                    'Scan the QR code below or type the number',
+                    'Enter the amount',
+                    'Add your name as reference',
+                    'Confirm payment with PIN'
+                ],
+                nagad: [
+                    'Open your Nagad app',
+                    'Select Payment option',
+                    'Scan the QR code below or type the number',
+                    'Enter the amount',
+                    'Add your name as reference',
+                    'Confirm payment with PIN'
+                ],
+                rocket: [
+                    'Open your Rocket app',
+                    'Select Merchant Pay option',
+                    'Type the merchant number provided below',
+                    'Enter the amount',
+                    'Add your name as reference',
+                    'Confirm payment with PIN'
+                ],
+                npsb: [
+                    'Open your bank app (e.g., CityTouch) or payment app',
+                    'Select Bangla QR or NPSB payment option',
+                    'Scan the QR code below',
+                    'Enter the amount',
+                    'Confirm payment'
+                ]
+            }
+        },
+        pricing: {
+            title: 'Our Packages',
+            whatsappMessage: 'Hello, I would like to order',
+            noteLabel: 'Note:'
+        },
+        about: {
+            thankYouMessage: 'Thank you for taking your valuable time to learn about us. We are here to help make your business digital journey successful.'
+        },
+        license: {
+            title: 'Our Government Trade License & Authorization',
+            description: 'We are a fully authorized and registered IT institution. Your business security and trust are very important to us. Below is our renewed Trade License for the financial year 2025-2026.'
+        },
+        tooltips: {
+            active: 'Active',
+            orderWhatsapp: 'Order on WhatsApp',
+            officeLocation: 'Office Location',
+            googleMap: 'Google Map - AS Marketing Business'
         },
     },
 };

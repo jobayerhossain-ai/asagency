@@ -1,7 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { content, Language, Content } from '../data/content';
+import { Language, Content } from '../data/content';
+import { content } from "@/data/content";
 
 interface LanguageContextType {
     language: Language;

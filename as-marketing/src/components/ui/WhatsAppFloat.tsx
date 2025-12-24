@@ -4,8 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CONFIG } from '@/data/config';
 import { WhatsAppIcon } from '@/components/ui/BrandIcons';
+import { useLanguage } from '@/context/LanguageContext';
 
 export const WhatsAppFloat = () => {
+    const { t } = useLanguage();
+
     return (
         <div className="fixed bottom-6 right-6 z-50 flex items-center justify-end group">
             {/* Text Bubble */}
@@ -18,7 +21,7 @@ export const WhatsAppFloat = () => {
                     transition-all duration-300 ease-out origin-right
                 "
             >
-                হোয়াটসঅ্যাপ এ যোগাযোগ করুন
+                {t.contact.whatsappTooltip}
             </div>
 
             {/* Button */}

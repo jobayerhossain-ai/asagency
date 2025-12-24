@@ -63,23 +63,28 @@ export const Footer = () => {
                         <p className="text-slate-500 text-sm leading-7">
                             {t.hero.description}
                         </p>
-                        <div className="flex gap-3 justify-center md:justify-start">
-                            {[
-                                { Icon: FacebookIcon, href: CONFIG.socials.facebook },
-                                { Icon: InstagramIcon, href: CONFIG.socials.instagram },
-                                { Icon: TikTokIcon, href: CONFIG.socials.tiktok },
-                                { Icon: YouTubeIcon, href: CONFIG.socials.youtube },
-                            ].map(({ Icon, href }, i) => (
-                                <a
-                                    key={i}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-500 hover:bg-brand-neon hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-brand-neon/30"
-                                >
-                                    <Icon size={20} />
-                                </a>
-                            ))}
+                        <div className="space-y-3 pt-2">
+                            <h5 className="font-bold text-slate-900 text-sm md:text-base text-center md:text-left">
+                                {t.footer.followUs}
+                            </h5>
+                            <div className="flex gap-3 justify-center md:justify-start">
+                                {[
+                                    { Icon: FacebookIcon, href: CONFIG.socials.facebook },
+                                    { Icon: InstagramIcon, href: CONFIG.socials.instagram },
+                                    { Icon: TikTokIcon, href: CONFIG.socials.tiktok },
+                                    { Icon: YouTubeIcon, href: CONFIG.socials.youtube },
+                                ].map(({ Icon, href }, i) => (
+                                    <a
+                                        key={i}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-500 hover:bg-brand-neon hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-brand-neon/30"
+                                    >
+                                        <Icon size={20} />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -92,7 +97,7 @@ export const Footer = () => {
                         <ul className="space-y-2">
                             <FooterLink href="/about">{t.nav.about}</FooterLink>
                             <FooterLink href="/license">
-                                লাইসেন্স দেখুন <span className="text-blue-600 font-semibold">(এখানে ক্লিক করুন)</span>
+                                {t.trust.viewLicense} <span className="text-blue-600 font-semibold">{t.trust.licenseClickHere}</span>
                             </FooterLink>
                             <FooterLink href="/portfolio">{t.nav.reviews}</FooterLink>
                             <FooterLink href="/contact">{t.nav.contact}</FooterLink>
@@ -129,7 +134,7 @@ export const Footer = () => {
                                 {CONFIG.contact.phoneDisplay}
                             </ContactItem>
                             <ContactItem icon={MapPin} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.contact.address)}`}>
-                                {CONFIG.contact.address}
+                                {t.contact.address}
                             </ContactItem>
                         </ul>
                     </div>

@@ -1,21 +1,21 @@
-import Image from 'next/image';
+'use client';
 
-export const metadata = {
-    title: 'Trade License | AS Marketing',
-    description: 'View our official government trade license and authorization document.',
-};
+import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function LicensePage() {
+    const { t } = useLanguage();
+
     return (
         <div className="min-h-screen bg-slate-50 pt-32 pb-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="mb-12">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6 leading-tight">
-                            আমাদের সরকারি ট্রেড লাইসেন্স ও অনুমোদন
+                            {t.license.title}
                         </h1>
                         <p className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                            আমরা একটি সম্পূর্ণ অনুমোদিত এবং নিবন্ধিত আইটি প্রতিষ্ঠান। আপনার ব্যবসায়িক নিরাপত্তা এবং বিশ্বাস আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ। নিচে আমাদের ২০২২-২০২৬ অর্থ বছরের নবায়নকৃত ট্রেড লাইসেন্স প্রদর্শিত হলো।
+                            {t.license.description}
                         </p>
                     </div>
 

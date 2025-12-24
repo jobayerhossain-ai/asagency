@@ -202,7 +202,7 @@ export const Navbar = () => {
                                             language === 'bn' ? "bg-brand-neon text-white" : "text-gray-500"
                                         )}
                                     >
-                                        Bangla
+                                        বাংলা
                                     </button>
                                 </div>
 

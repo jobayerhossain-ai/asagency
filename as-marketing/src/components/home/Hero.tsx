@@ -26,7 +26,7 @@ export const Hero = () => {
                     className="max-w-4xl mx-auto"
                 >
                     {/* Tagline */}
-                    <motion.div variants={fadeInUp} className="mb-8">
+                    <motion.div variants={fadeInUp} className="mb-4 mt-4">
                         <span className="inline-block px-6 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-brand-sky text-lg font-bold tracking-wide text-brand-neon">
                             {t.hero.subtitle}
                         </span>

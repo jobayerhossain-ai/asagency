@@ -81,7 +81,7 @@ export default function AboutPage() {
                     {/* Footer / Thanks */}
                     <div className="mt-12 pt-8 border-t border-slate-100 text-center">
                         <p className="text-lg font-medium text-slate-800 italic">
-                            "ধন্যবাদ আপনার মূল্যবান সময় দিয়ে আমাদের সম্পর্কে জানার জন্য। আপনার ব্যবসার ডিজিটাল যাত্রাকে সফল করতে আমরা আছি আপনার পাশে।"
+                            "{t.about.thankYouMessage}"
                         </p>
                     </div>
                 </div>
@@ -103,21 +103,22 @@ export default function AboutPage() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
-                                className="relative bg-white p-2 rounded-lg shadow-2xl pointer-events-auto max-w-2xl w-full max-h-[90vh] overflow-auto"
+                                className="relative w-full max-w-2xl pointer-events-auto"
                             >
                                 <button
                                     onClick={() => setShowLicense(false)}
-                                    className="absolute -top-4 -right-4 p-2 bg-white rounded-full text-slate-900 shadow-lg hover:bg-slate-100 transition-colors z-10"
+                                    className="absolute -top-3 -right-3 md:-top-4 md:-right-4 p-2 bg-white rounded-full text-slate-900 shadow-lg hover:bg-slate-100 transition-colors z-50 border border-slate-100"
                                 >
                                     <X size={24} />
                                 </button>
-                                <div className="relative w-full aspect-[3/4] sm:aspect-[4/3]">
-                                    {/* Using standard HTML img tag for local file outside of Next.js opt if needed, but Image is better. assuming /license.png exists in public */}
-                                    <img
-                                        src="/license.png"
-                                        alt="Trade License"
-                                        className="w-full h-full object-contain bg-slate-50"
-                                    />
+                                <div className="bg-white p-2 rounded-lg shadow-2xl max-h-[85vh] overflow-auto">
+                                    <div className="relative w-full">
+                                        <img
+                                            src="/license.png"
+                                            alt="Trade License"
+                                            className="w-full h-auto object-contain bg-slate-50 rounded"
+                                        />
+                                    </div>
                                 </div>
                             </motion.div>
                         </div>

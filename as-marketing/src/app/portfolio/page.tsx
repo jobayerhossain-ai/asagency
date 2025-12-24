@@ -54,12 +54,13 @@ export default function PortfolioPage() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     return (
-        <main className="min-h-screen pt-24 pb-20 bg-slate-50">
+        <main className="min-h-screen pt-40 pb-20 bg-slate-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-heading mb-4">
                         {t.proofs.title}
                     </h1>
+                    <div className="w-24 h-1.5 bg-brand-neon mx-auto rounded-full mb-6" />
                     <p className="text-lg text-muted max-w-2xl mx-auto">
                         {t.proofs.description}
                     </p>

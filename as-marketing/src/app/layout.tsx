@@ -16,7 +16,7 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 export const metadata: Metadata = {
-  title: "AS Marketing Business | বিশ্বাসের একটি নাম",
+  title: "AS Marketing Business",
   description: "World-class animated digital marketing agency.",
 };
 

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&text=%E0%A7%A7&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
 
 :root {
   /* Brand Colors */
@@ -102,4 +102,36 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(10, 26, 255, 0.4);
+}
+
+/* CEO Name - Force Black Color */
+.ceo-name-black {
+  color: #000000 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Override any text-transparent that might be applied */
+.ceo-name-black.text-transparent {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+}
+
+h3.ceo-name-black {
+  color: #000000 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Ultra-specific override for CEO name - removes all transparency */
+h3.text-4xl.md\:text-5xl.font-extrabold.ceo-name-black,
+h3.text-3xl.md\:text-4xl.font-extrabold.ceo-name-black {
+  color: #000000 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+  background-image: none !important;
 }
