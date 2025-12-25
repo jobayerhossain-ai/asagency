@@ -91,7 +91,7 @@ export const Footer = () => {
                     {/* Links 1 */}
                     <div className="text-center md:text-left">
                         <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
-                            Company
+                            {t.footer.company}
                             <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">
@@ -107,7 +107,7 @@ export const Footer = () => {
                     {/* Links 2 */}
                     <div className="text-center md:text-left">
                         <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
-                            Services
+                            {t.footer.services}
                             <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">
@@ -123,7 +123,7 @@ export const Footer = () => {
                     {/* Contact */}
                     <div className="text-center md:text-left">
                         <h4 className="font-bold text-heading mb-6 text-sm uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
-                            Contact
+                            {t.footer.contact}
                             <div className="hidden md:block h-px flex-1 bg-slate-100" />
                         </h4>
                         <ul className="space-y-2">

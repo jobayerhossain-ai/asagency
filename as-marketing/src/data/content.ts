@@ -16,6 +16,7 @@ export interface Content {
         description: string;
         ctaPrimary: string;
         ctaSecondary: string;
+        bismillah: string;
     };
     services: {
         title: string;
@@ -66,6 +67,9 @@ export interface Content {
     footer: {
         rights: string;
         followUs: string;
+        company: string;
+        services: string;
+        contact: string;
     };
     ceo: {
         title: string;
@@ -137,6 +141,7 @@ export const content: Record<Language, Content> = {
             cta: 'ফেসবুকে মেসেজ দিন',
         },
         hero: {
+            bismillah: 'বিসমিল্লাহির রাহমানির রাহিম',
             title: 'AS Marketing Business',
             subtitle: 'বিশ্বাসের একটি নাম',
             description: 'আমরা আধুনিক ডিজিটাল মার্কেটিং স্ট্র্যাটেজির মাধ্যমে আপনার ব্যবসাকে অনলাইনে দ্রুত গ্রো করতে সহায়তা করি।',
@@ -149,7 +154,7 @@ export const content: Record<Language, Content> = {
                 facebook: 'ফেসবুক সার্ভিস (Meta Ads)',
                 instagram: 'ইনস্টাগ্রাম সার্ভিস (Meta Ads)',
                 tiktok: 'টিকটক সার্ভিস',
-                youtube: 'ইউটিউব ও ভিডিও সার্ভিস',
+                youtube: 'ইউটিউব সার্ভিস',
                 web: 'ওয়েবসাইট সলিউশন',
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
@@ -233,13 +238,13 @@ export const content: Record<Language, Content> = {
                     desc: 'ফেসবুক বা ডিজিটাল প্ল্যাটফর্মের অ্যালগরিদম প্রতিনিয়ত পরিবর্তনশীল। তাই আমরা মিথ্যে আশ্বাস না দিয়ে ডাটা এবং স্ট্র্যাটেজির ওপর ভিত্তি করে কাজ করি।'
                 },
                 {
+                    title: '২৪/৭ সাপোর্ট',
+                    desc: 'আমরা সপ্তাহে ৭ দিন এবং ২৪ ঘন্টা সেবা প্রদান করি, যাতে আপনার ব্যবসার প্রবৃদ্ধি কখনোই থেমে না থাকে।'
+                },
+                {
                     title: 'সরকারিভাবে অনুমোদিত',
                     desc: 'আমরা একটি সরকার অনুমোদিত আইটি কোম্পানি (ট্রেড লাইসেন্স নং: ০৭৬১৪)। আপনার বিশ্বাস ও নিরাপত্তাই আমাদের প্রধান লক্ষ্য।',
                     image: '/license.png'
-                },
-                {
-                    title: '২৪/৭ সাপোর্ট',
-                    desc: 'আমরা সপ্তাহে ৭ দিন এবং ২৪ ঘন্টা সেবা প্রদান করি, যাতে আপনার ব্যবসার প্রবৃদ্ধি কখনোই থেমে না থাকে।'
                 }
             ],
             viewLicense: 'লাইসেন্স দেখুন',
@@ -293,6 +298,9 @@ export const content: Record<Language, Content> = {
         footer: {
             rights: '© ২০২০-২০২৫ AS Marketing Business. সর্বস্বত্ব সংরক্ষিত।',
             followUs: 'আমাদের অনুসরণ করুন',
+            company: 'কোম্পানি',
+            services: 'সার্ভিসসমূহ',
+            contact: 'যোগাযোগ',
         },
         ceo: {
             title: 'আমাদের নেতৃত্ব',
@@ -389,6 +397,7 @@ export const content: Record<Language, Content> = {
             cta: 'Message on Facebook',
         },
         hero: {
+            bismillah: 'Bismillahir Rahmanir Rahim',
             title: 'AS Marketing Business',
             subtitle: 'A Name of Trust',
             description: 'We help businesses grow fast online through modern digital marketing strategies.',
@@ -401,7 +410,7 @@ export const content: Record<Language, Content> = {
                 facebook: 'Facebook Services (Meta Ads)',
                 instagram: 'Instagram Services (Meta Ads)',
                 tiktok: 'TikTok Services',
-                youtube: 'YouTube & Video Services',
+                youtube: 'YouTube Services',
                 web: 'Website Solutions',
                 graphics: 'Design & Branding',
             },
@@ -480,13 +489,13 @@ export const content: Record<Language, Content> = {
                     desc: 'We work based on data and strategy, not false promises, adapting to ever-changing digital algorithms.'
                 },
                 {
-                    title: 'Government Approved',
-                    desc: 'We are a government registered IT agency (Trade License No: ...). Your trust and security is our main goal.',
-                    image: '/license.png'
-                },
-                {
                     title: '24/7 Support Service',
                     desc: 'We provide support 24 hours a day, 7 days a week, ensuring your business growth never stops.'
+                },
+                {
+                    title: 'Government Approved',
+                    desc: 'We are a government registered IT agency (Trade License No: 07614). Your trust and security is our main goal.',
+                    image: '/license.png'
                 }
             ],
             viewLicense: 'View License',
@@ -540,6 +549,9 @@ export const content: Record<Language, Content> = {
         footer: {
             rights: '© 2020-2025 AS Marketing Business. All rights reserved.',
             followUs: 'Follow Us',
+            company: 'Company',
+            services: 'Services',
+            contact: 'Contact',
         },
         ceo: {
             title: 'Our Leadership',

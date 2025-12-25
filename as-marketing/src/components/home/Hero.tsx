@@ -10,7 +10,7 @@ import { FacebookIcon, WhatsAppIcon } from '@/components/ui/BrandIcons';
 import { CONFIG } from '@/data/config';
 
 export const Hero = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32">
@@ -25,8 +25,15 @@ export const Hero = () => {
                     animate="visible"
                     className="max-w-4xl mx-auto"
                 >
+                    {/* Bismillah Text */}
+                    <motion.div variants={fadeInUp} className="mb-6">
+                        <span className={`text-xl md:text-2xl font-semibold opacity-80 text-slate-800 block ${language === 'bn' ? 'font-hind' : 'font-inter'}`}>
+                            {t.hero.bismillah}
+                        </span>
+                    </motion.div>
+
                     {/* Tagline */}
-                    <motion.div variants={fadeInUp} className="mb-4 mt-4">
+                    <motion.div variants={fadeInUp} className="mb-4">
                         <span className="inline-block px-6 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-brand-sky text-lg font-bold tracking-wide text-brand-neon">
                             {t.hero.subtitle}
                         </span>

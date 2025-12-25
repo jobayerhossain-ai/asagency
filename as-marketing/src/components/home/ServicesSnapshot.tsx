@@ -152,7 +152,7 @@ export const ServicesSnapshot = () => {
                                 <img
                                     src="/npsb-logo.png"
                                     alt="NPSB"
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain scale-75"
                                 />
                             </div>
                             <span className="text-blue-600 font-medium text-xs md:text-sm text-center">
