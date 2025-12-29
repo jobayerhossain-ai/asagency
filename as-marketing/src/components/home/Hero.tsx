@@ -101,7 +101,7 @@ export const Hero = () => {
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
                             <Image
-                                src="/our-services-cover.jpg"
+                                src="/hero-banner-new.png"
                                 alt="Our Services - AS Marketing"
                                 width={1200}
                                 height={400}
