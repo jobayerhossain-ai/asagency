@@ -308,7 +308,8 @@ export const content: Record<Language, Content> = {
         },
         team: {
             title: 'আমাদের টিম',
-            subtitle: 'আমাদের দক্ষ এক্সপার্ট টিমের সাথে পরিচিত হোন'
+            subtitle: 'আমাদের দক্ষ এক্সপার্ট টিমের সাথে পরিচিত হোন',
+            expertTeam: 'অন্যান্য এক্সপার্টবৃন্দ'
         },
         contact: {
             phoneWhatsapp: 'ফোন / হোয়াটসঅ্যাপ',
@@ -556,7 +557,8 @@ export const content: Record<Language, Content> = {
         },
         team: {
             title: 'Our Team',
-            subtitle: 'Meet our expert team members'
+            subtitle: 'Meet our expert team members',
+            expertTeam: 'Others Experts'
         },
         contact: {
             phoneWhatsapp: 'Phone / WhatsApp',

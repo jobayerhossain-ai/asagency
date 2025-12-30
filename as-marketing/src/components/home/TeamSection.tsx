@@ -289,6 +289,13 @@ export const TeamSection = () => {
                     </motion.div>
                 </div>
 
+                {/* Other Experts Heading */}
+                <div className="text-center mb-12">
+                    <h3 className="text-3xl font-bold text-blue-600">
+                        {t.team.expertTeam}
+                    </h3>
+                </div>
+
                 {/* Team Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
                     {TEAM_MEMBERS.map((member, index) => (
