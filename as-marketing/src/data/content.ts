@@ -151,11 +151,11 @@ export const content: Record<Language, Content> = {
         services: {
             title: 'আমাদের প্রিমিয়াম সার্ভিসসমূহ',
             items: {
-                facebook: 'ফেসবুক সার্ভিস (Meta Ads)',
-                instagram: 'ইনস্টাগ্রাম সার্ভিস (Meta Ads)',
+                facebook: 'ফেসবুক সার্ভিস',
+                instagram: 'ইনস্টাগ্রাম সার্ভিস',
                 tiktok: 'টিকটক সার্ভিস',
                 youtube: 'ইউটিউব সার্ভিস',
-                web: 'Web Solutions',
+                web: 'ওয়েব সলিউশন',
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
             seeDetails: 'বিস্তারিত দেখুন →',
@@ -331,7 +331,7 @@ export const content: Record<Language, Content> = {
             merchantNumber: 'মার্চেন্ট নাম্বার',
             howToPay: 'কিভাবে পেমেন্ট করবেন:',
             scanDirectly: 'সরাসরি স্ক্যান করুন',
-            methodsTitle: 'পেমেন্ট মেথড',
+            methodsTitle: 'পেমেন্ট পদ্ধতি',
             clickToPay: 'পেমেন্ট করতে ক্লিক করুন',
             instructions: {
                 bkash: [
@@ -407,11 +407,11 @@ export const content: Record<Language, Content> = {
         services: {
             title: 'Our Premium Services',
             items: {
-                facebook: 'Facebook Services (Meta Ads)',
-                instagram: 'Instagram Services (Meta Ads)',
+                facebook: 'Facebook Services',
+                instagram: 'Instagram Services',
                 tiktok: 'TikTok Services',
                 youtube: 'YouTube Services',
-                web: 'Website Solutions',
+                web: 'Web Solutions',
                 graphics: 'Design & Branding',
             },
             seeDetails: 'See Details →',
