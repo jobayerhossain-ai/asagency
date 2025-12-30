@@ -155,7 +155,7 @@ export const content: Record<Language, Content> = {
                 instagram: 'ইনস্টাগ্রাম সার্ভিস (Meta Ads)',
                 tiktok: 'টিকটক সার্ভিস',
                 youtube: 'ইউটিউব সার্ভিস',
-                web: 'ওয়েবসাইট সলিউশন',
+                web: 'Web Solutions',
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
             seeDetails: 'বিস্তারিত দেখুন →',
