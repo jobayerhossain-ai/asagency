@@ -215,7 +215,7 @@ export const content: Record<Language, Content> = {
         },
         trust: {
             title: 'কেন আমাদের বেছে নেবেন?',
-            description: 'আমরা শুধু সার্ভিস দিই না, আমরা ফলাফল তৈরি করি।',
+            description: 'আমরা শুধু সার্ভিস দেই না, আমরা ফলাফল তৈরি করি।',
             points: [
                 {
                     title: 'স্বীকৃত ও বিশ্বস্ত',
