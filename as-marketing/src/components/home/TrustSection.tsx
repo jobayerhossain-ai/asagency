@@ -36,36 +36,45 @@ export const TrustSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {t.trust.points?.map((point, index) => (
-                        <Card
-                            key={index}
-                            className="p-8 h-full border-t-4 border-t-brand-neon hover:border-t-brand-neon transition-all"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                        >
-                            <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-sky text-brand-neon">
-                                <CheckCircle2 size={24} />
-                            </div>
-                            <h3 className="text-xl font-bold text-heading mb-3">
-                                {point.title}
-                            </h3>
-                            <p className="text-body/80 leading-relaxed">
-                                {point.desc}
-                            </p>
-                            {point.image && (
-                                <div className="mt-4 pt-4 border-t border-slate-100">
-                                    <img
-                                        src={point.image}
-                                        alt="License"
-                                        className="w-auto max-w-full mx-auto block h-48 object-contain rounded-lg"
-                                    />
-                                    <p className="text-center text-xs text-slate-400 mt-2">{t.trust.tradeLicenseCaption}</p>
+                    {t.trust.points?.map((point, index) => {
+                        const hasImage = !!point.image;
+                        return (
+                            <Card
+                                key={index}
+                                className={`p-8 h-full border-t-4 border-t-brand-neon hover:border-t-brand-neon transition-all ${hasImage ? 'lg:col-span-3' : ''
+                                    }`}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className={hasImage ? "flex flex-col lg:flex-row items-center gap-8" : ""}>
+                                    <div className={hasImage ? "flex-1 text-left" : ""}>
+                                        <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-sky text-brand-neon">
+                                            <CheckCircle2 size={24} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-heading mb-3">
+                                            {point.title}
+                                        </h3>
+                                        <p className="text-body/80 leading-relaxed">
+                                            {point.desc}
+                                        </p>
+                                    </div>
+                                    {point.image && (
+                                        <div className={`mt-4 pt-4 border-t border-slate-100 ${hasImage ? 'lg:mt-0 lg:pt-0 lg:border-t-0 lg:border-l lg:pl-8 lg:w-1/3 w-full flex flex-col items-center justify-center' : ''
+                                            }`}>
+                                            <img
+                                                src={point.image}
+                                                alt="License"
+                                                className="w-auto max-w-full mx-auto block h-48 object-contain rounded-lg"
+                                            />
+                                            <p className="text-center text-xs text-slate-400 mt-2">{t.trust.tradeLicenseCaption}</p>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </Card>
-                    ))}
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </section>
