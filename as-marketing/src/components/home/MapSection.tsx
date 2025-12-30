@@ -11,7 +11,7 @@ export const MapSection = () => {
     // Adjusted zoom level to show Kushtia area
     const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116860.8!2d89.12!3d23.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a77a1c017f8757b%3A0xae943c063538c2b5!2sAS%20Marketing%20Business!5e0!3m2!1sbn!2sbd`;
 
-    const title = language === 'bn' ? 'আমাদের লোকেশন' : 'Our Location';
+    const title = language === 'bn' ? 'অফিসের ঠিকানা' : 'Office Address';
     const address = language === 'bn'
         ? 'কাস্টমস মোড়, কুষ্টিয়া সদর'
         : 'Customs mor, Kushtia Sadar';

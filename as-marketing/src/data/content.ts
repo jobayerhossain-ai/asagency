@@ -81,6 +81,7 @@ export interface Content {
     team: {
         title: string;
         subtitle: string;
+        expertTeam: string;
     };
     contact: {
         phoneWhatsapp: string;
