@@ -73,14 +73,7 @@ export const CeoSection = () => {
                         </div>
 
                         {/* Social Links / Badges */}
-                        <div className="flex flex-wrap gap-4 pt-4">
-                            <div className="px-6 py-3 bg-gradient-to-r from-brand-neon to-blue-600 text-white rounded-lg shadow-xl shadow-brand-neon/30 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                                🏆 Award Winning Leader
-                            </div>
-                            <div className="px-6 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600 text-white rounded-lg shadow-lg font-semibold text-sm transition-all duration-300 hover:scale-105 hover:bg-slate-700">
-                                ✨ Visionary Founder
-                            </div>
-                        </div>
+
                     </div>
 
                     {/* Image Side - Right */}
