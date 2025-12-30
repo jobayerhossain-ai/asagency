@@ -283,13 +283,7 @@ export const TeamSection = () => {
                                     {t.ceo.description}
                                 </p>
 
-                                <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
-                                    {['Visionary Leadership', 'Business Strategy', 'Digital Expert'].map((skill, i) => (
-                                        <span key={i} className="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-semibold text-slate-600">
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
+
                             </div>
                         </div>
                     </motion.div>
