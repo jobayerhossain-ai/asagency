@@ -219,7 +219,8 @@ export const content: Record<Language, Content> = {
             points: [
                 {
                     title: 'স্বীকৃত ও বিশ্বস্ত',
-                    desc: 'আমরা একটি সরকারি অনুমোদিত আইটি প্রতিষ্ঠান, যা আপনার বিনিয়োগের নিরাপত্তা নিশ্চিত করে।'
+                    desc: 'আমরা একটি সরকারি অনুমোদিত আইটি প্রতিষ্ঠান, Trade License Number (07614) যা আপনার বিনিয়োগের নিরাপত্তা নিশ্চিত করে।',
+                    image: '/license.png'
                 },
                 {
                     title: 'দক্ষ বিশেষজ্ঞ টিম',
@@ -241,11 +242,7 @@ export const content: Record<Language, Content> = {
                     title: '২৪/৭ সাপোর্ট',
                     desc: 'আমরা সপ্তাহে ৭ দিন এবং ২৪ ঘন্টা সেবা প্রদান করি, যাতে আপনার ব্যবসার প্রবৃদ্ধি কখনোই থেমে না থাকে।'
                 },
-                {
-                    title: 'সরকারিভাবে অনুমোদিত',
-                    desc: 'আমরা একটি সরকার অনুমোদিত আইটি কোম্পানি (ট্রেড লাইসেন্স নং: ০৭৬১৪)। আপনার বিশ্বাস ও নিরাপত্তাই আমাদের প্রধান লক্ষ্য।',
-                    image: '/license.png'
-                }
+
             ],
             viewLicense: 'লাইসেন্স দেখুন',
             tradeLicenseCaption: 'ট্রেড লাইসেন্স',
@@ -470,7 +467,8 @@ export const content: Record<Language, Content> = {
             points: [
                 {
                     title: 'Authorized & Trusted',
-                    desc: 'We are a government-licensed authorized IT institution, ensuring the safety of your investment.'
+                    desc: 'We are a government-licensed authorized IT institution, Trade License Number (07614) ensuring the safety of your investment.',
+                    image: '/license.png'
                 },
                 {
                     title: 'Expert Team',
@@ -492,11 +490,7 @@ export const content: Record<Language, Content> = {
                     title: '24/7 Support Service',
                     desc: 'We provide support 24 hours a day, 7 days a week, ensuring your business growth never stops.'
                 },
-                {
-                    title: 'Government Approved',
-                    desc: 'We are a government registered IT agency (Trade License No: 07614). Your trust and security is our main goal.',
-                    image: '/license.png'
-                }
+
             ],
             viewLicense: 'View License',
             tradeLicenseCaption: 'Trade License',
