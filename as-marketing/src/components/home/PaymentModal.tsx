@@ -61,7 +61,9 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                 >
                     {/* Header */}
                     <div className={`${colors[method]} p-4 flex justify-between items-center text-white`}>
-                        <h3 className="text-xl font-bold capitalize">{method} {t.payment.modalTitle}</h3>
+                        <h3 className="text-xl font-bold">
+                            <span className={method === 'npsb' ? 'uppercase' : 'capitalize'}>{method}</span> {t.payment.modalTitle}
+                        </h3>
                         <button onClick={onClose} className="p-1 hover:bg-white/20 rounded-full transition-colors">
                             <X size={24} />
                         </button>

@@ -360,7 +360,6 @@ export const content: Record<Language, Content> = {
                 ],
                 npsb: [
                     'আপনার ব্যাংক অ্যাপ (যেমন CityTouch) বা পেমেন্ট অ্যাপ ওপেন করুন',
-                    'Bangla QR বা NPSB পেমেন্ট অপশন সিলেক্ট করুন',
                     'নিচের QR কোডটি স্ক্যান করুন',
                     'টাকার পরিমাণ উল্লেখ করুন',
                     'পেমেন্ট কনফার্ম করুন'
@@ -611,7 +610,6 @@ export const content: Record<Language, Content> = {
                 ],
                 npsb: [
                     'Open your bank app (e.g., CityTouch) or payment app',
-                    'Select Bangla QR or NPSB payment option',
                     'Scan the QR code below',
                     'Enter the amount',
                     'Confirm payment'
