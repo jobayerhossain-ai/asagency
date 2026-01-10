@@ -226,9 +226,9 @@ export const TeamSection = () => {
 
                             {/* CEO Info */}
                             <div className="text-center md:text-left space-y-6 flex-1">
-                                <div className="flex items-start gap-3">
-                                    <Quote className="w-10 h-10 text-brand-neon/40 transform -scale-x-100 shrink-0 -mt-2" />
-                                    <blockquote className="text-2xl md:text-3xl font-bold text-heading italic leading-tight">
+                                <div className="flex items-start gap-1 md:gap-3">
+                                    <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-neon/40 transform -scale-x-100 shrink-0 -mt-1 md:-mt-2" />
+                                    <blockquote className="text-xl md:text-3xl font-bold text-heading italic leading-tight">
                                         "{t.ceo.quote}"
                                     </blockquote>
                                 </div>
