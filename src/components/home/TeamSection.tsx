@@ -43,7 +43,7 @@ const TEAM_MEMBERS = [
         id: 'AS-007',
         name: 'Abdul Al Galib',
         role: 'Facebook Ads Expert',
-        image: '/team-galib-new.png'
+        image: '/team-galib-final.png'
     },
     {
         id: 'AS-008',
