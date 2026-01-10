@@ -360,7 +360,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-011': {
                     name: 'পৃথিবী রহমান',
-                    role: 'গুগল এড এক্সপার্ট (ইউটিউব মার্কেটিং)'
+                    role: 'গুগল এড এক্সপার্ট'
                 },
                 'AS-012': {
                     name: 'জাহাঙ্গীর আলম',
@@ -368,7 +368,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-013': {
                     name: 'জোবায়ের হোসেন',
-                    role: 'ওয়েব ডিজাইনার এবং ডেভেলপার'
+                    role: 'ওয়েব ডেভেলপার'
                 },
                 'AS-014': {
                     name: 'মেহেদী হাসান',
@@ -674,7 +674,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-011': {
                     name: 'Prithibi Rahman',
-                    role: 'Google Ads Expert – YouTube Marketing'
+                    role: 'Google Ads Expert'
                 },
                 'AS-012': {
                     name: 'Jahangir Alam',
@@ -682,7 +682,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-013': {
                     name: 'Jobayer Hossain',
-                    role: 'Web Designer and Developer'
+                    role: 'Web Developer'
                 },
                 'AS-014': {
                     name: 'Mahedi Hasan',
