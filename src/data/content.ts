@@ -376,7 +376,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-015': {
                     name: 'আখি গাজী',
-                    role: 'ফেসবুক এবং ইনস্টাগ্রাম এড এক্সপার্ট'
+                    role: 'ইনস্টাগ্রাম এড এক্সপার্ট'
                 }
             }
         },
@@ -690,7 +690,7 @@ export const content: Record<Language, Content> = {
                 },
                 'AS-015': {
                     name: 'Akhi Gazi',
-                    role: 'Facebook & Instagram Ads Expert'
+                    role: 'Instagram Ads Expert'
                 }
             }
         },
