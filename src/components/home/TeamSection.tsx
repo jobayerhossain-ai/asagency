@@ -135,6 +135,7 @@ export const TeamSection = () => {
                         ${member.id === 'AS-003' ? 'scale-[1.6]' : ''}
                         ${member.id === 'AS-002' ? 'scale-[1.7]' : ''}
                         ${member.id === 'AS-007' ? 'scale-110' : ''}
+                        ${['AS-008', 'AS-009'].includes(member.id) ? 'scale-90' : ''}
                     `}>
                         <Image
                             src={member.image}
