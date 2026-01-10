@@ -134,7 +134,7 @@ export const TeamSection = () => {
                         ${['AS-013'].includes(member.id) ? 'scale-[1.4]' : ''}
                         ${member.id === 'AS-003' ? 'scale-[1.6]' : ''}
                         ${member.id === 'AS-002' ? 'scale-[1.9]' : ''}
-                        ${member.id === 'AS-007' ? 'scale-110' : ''}
+                        ${['AS-006', 'AS-007'].includes(member.id) ? 'scale-110' : ''}
                         ${['AS-008', 'AS-009'].includes(member.id) ? 'scale-90' : ''}
                     `}>
                         <Image
