@@ -9,8 +9,9 @@ import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function PricingPage() {
-    const { t } = useLanguage();
-    const [activeTab, setActiveTab] = useState(packages[0].id);
+    const { t, language } = useLanguage();
+    const currentPackages = packages[language as 'bn' | 'en'] || packages.bn;
+    const [activeTab, setActiveTab] = useState(packages.bn[0].id);
 
     const getIcon = (id: string) => {
         switch (id) {
@@ -21,7 +22,7 @@ export default function PricingPage() {
         }
     };
 
-    const activeCategory = packages.find(p => p.id === activeTab);
+    const activeCategory = currentPackages.find(p => p.id === activeTab);
 
     const handleOrder = (pkgTitle: string, optionName: string, price: string) => {
         const message = `${t.pricing.whatsappMessage}:
@@ -57,7 +58,7 @@ Please provide details.`;
 
                 {/* Tabs */}
                 <div className="flex flex-wrap justify-center gap-4 mb-16">
-                    {packages.map((pkg) => {
+                    {currentPackages.map((pkg) => {
                         const Icon = getIcon(pkg.id);
                         const isActive = activeTab === pkg.id;
                         return (
