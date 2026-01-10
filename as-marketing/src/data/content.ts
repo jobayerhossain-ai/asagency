@@ -37,6 +37,8 @@ export interface Content {
             graphics: string[];
         };
         seeDetails: string;
+        orderButton: string;
+        orderMessage: string;
     };
     trust: {
         title: string;
@@ -166,6 +168,8 @@ export const content: Record<Language, Content> = {
                 graphics: 'ডিজাইন ও ব্র্যান্ডিং',
             },
             seeDetails: 'বিস্তারিত দেখুন →',
+            orderButton: 'অর্ডার করতে চাই',
+            orderMessage: 'আমি আপনাদের {service} সার্ভিসটি নিতে চাই',
             details: {
                 facebook: [
                     'এড ক্যাম্পেইন',
@@ -221,8 +225,8 @@ export const content: Record<Language, Content> = {
             },
         },
         trust: {
-            title: 'কেন আমাদের বেছে নেবেন ?',
-            description: 'আমরা শুধু সার্ভিস দেই না, বরং ফলাফল তৈরি করি।',
+            title: 'কেন আমাদের বেছে নিবেন?',
+            description: 'আমরা শুধু সার্ভিস দেই না, আমরা ফলাফল তৈরি করি।',
             points: [
                 {
                     title: 'স্বীকৃত ও বিশ্বস্ত',
@@ -474,6 +478,8 @@ export const content: Record<Language, Content> = {
                 graphics: 'Design & Branding',
             },
             seeDetails: 'See Details →',
+            orderButton: 'Want to Order',
+            orderMessage: 'I would like to order your {service}',
             details: {
                 facebook: [
                     'Ads Campaign',
@@ -530,7 +536,7 @@ export const content: Record<Language, Content> = {
         },
         trust: {
             title: 'Why Choose Us?',
-            description: 'We don\'t just deliver services; we deliver results.',
+            description: 'We don\'t just provide services, we make results.',
             points: [
                 {
                     title: 'Authorized & Trusted',
