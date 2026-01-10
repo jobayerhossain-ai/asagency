@@ -131,7 +131,8 @@ export const TeamSection = () => {
                     <div className={`relative w-full h-full 
                         ${['AS-002', 'AS-003', 'AS-005', 'AS-007'].includes(member.id) ? 'translate-y-2' : ''} 
                         ${['AS-005', 'AS-006', 'AS-007'].includes(member.id) ? 'scale-125' : ''}
-                        ${['AS-013', 'AS-012'].includes(member.id) ? 'scale-[1.4]' : ''}
+                        ${['AS-013'].includes(member.id) ? 'scale-[1.4]' : ''}
+                        ${['AS-012'].includes(member.id) ? 'scale-[1.5]' : ''}
                         ${member.id === 'AS-003' ? 'scale-[1.6]' : ''}
                         ${member.id === 'AS-002' ? 'scale-[1.9]' : ''}
                         ${['AS-008', 'AS-009'].includes(member.id) ? 'scale-90' : ''}
