@@ -129,8 +129,10 @@ export const TeamSection = () => {
                 <div className={`relative w-24 h-24 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-white border-2 border-brand-neon/50 transition-colors ${member.id === 'AS-002' ? 'p-3' : member.id === 'AS-006' ? 'p-1' : ''}`}>
                     <div className={`relative w-full h-full 
                         ${['AS-002', 'AS-003', 'AS-005', 'AS-006'].includes(member.id) ? 'translate-y-2' : ''} 
-                        ${['AS-003', 'AS-005', 'AS-012'].includes(member.id) ? 'scale-125' : ''}
-                        ${['AS-002', 'AS-013'].includes(member.id) ? 'scale-[1.4]' : ''}
+                        ${['AS-005', 'AS-012'].includes(member.id) ? 'scale-125' : ''}
+                        ${['AS-013'].includes(member.id) ? 'scale-[1.4]' : ''}
+                        ${member.id === 'AS-003' ? 'scale-[1.6]' : ''}
+                        ${member.id === 'AS-002' ? 'scale-[1.7]' : ''}
                     `}>
                         <Image
                             src={member.image}
