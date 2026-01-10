@@ -7,6 +7,11 @@ import { X, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 
 const proofs = [
+    { id: 201, src: '/proofs/top-review-1.png', alt: 'Top Review 1' },
+    { id: 202, src: '/proofs/top-review-2.png', alt: 'Top Review 2' },
+    { id: 203, src: '/proofs/top-review-3.png', alt: 'Top Review 3' },
+    { id: 204, src: '/proofs/top-review-4.png', alt: 'Top Review 4' },
+    { id: 205, src: '/proofs/top-review-5.png', alt: 'Top Review 5' },
     { id: 106, src: '/proofs/featured-6.jpg', alt: 'Featured Review 6' },
     { id: 107, src: '/proofs/featured-7.jpg', alt: 'Featured Review 7' },
     { id: 108, src: '/proofs/featured-8.jpg', alt: 'Featured Review 8' },

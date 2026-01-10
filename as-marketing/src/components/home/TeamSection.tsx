@@ -6,191 +6,133 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { Quote, Briefcase, BadgeCheck, Fingerprint } from 'lucide-react';
 
-// Mock Data for Team Members (14 members)
-const generateTeamMembers = () => {
-    const roles = [
-        'Operations Manager', // 002
-        'Senior Web Developer', // 003
-        'Head of Digital Marketing', // 004
-        'Creative Director', // 005
-        'Meta Ads Expert', // 006 (Inzi Haq)
-        'Content Manager', // 007
-        'Social Media Strategist', // 008
-        'Senior Graphic Designer', // 009
-        'Video Production Lead', // 010
-        'Client Relations Manager', // 011
-        'Performance Marketer', // 012
-        'Support Lead', // 013
-        'Business Development', // 014
-        'Technical Specialist' // 015
-    ];
-
-    return roles.map((role, idx) => {
-        const idNumber = idx + 2; // Start from 002 (CEO is 001)
-        const idString = idNumber.toString().padStart(3, '0');
-        const id = `AS-${idString}`;
-
-        // Specific overrides
-        if (id === 'AS-002') {
-            return {
-                id,
-                name: 'Shawon Ahmed',
-                role: 'Meta Ads Expert (Facebook)',
-                image: '/team-shawon-ahmed.jpg'
-            };
-        }
-
-        if (id === 'AS-003') {
-            return {
-                id,
-                name: 'Md Abdul Al Galib',
-                role: 'Meta Ads Expert (Facebook)',
-                image: '/team-galib.png'
-            };
-        }
-
-        if (id === 'AS-004') {
-            return {
-                id,
-                name: 'Md Amenol',
-                role: 'Head of Marketing',
-                image: '/team-amenol.png'
-            };
-        }
-
-        if (id === 'AS-006') {
-            return {
-                id,
-                name: 'Inzi Haq',
-                role: 'Meta Ads Expert',
-                image: '/team-inzi-haq.jpg'
-            };
-        }
-
-        if (id === 'AS-008') {
-            return {
-                id,
-                name: 'Jaidul Islam',
-                role: 'Meta Ads Expert (Instagram)',
-                image: '/team-jaidul.png'
-            };
-        }
-
-        if (id === 'AS-009') {
-            return {
-                id,
-                name: 'Tahmid Sadiq',
-                role: 'Meta Ads Expert (Instagram)',
-                image: '/team-tahmid.jpg'
-            };
-        }
-
-        if (id === 'AS-010') {
-            return {
-                id,
-                name: 'Jobayer Hossain',
-                role: 'Web Designer and Developer',
-                image: '/team-jobayer.png'
-            };
-        }
-
-        if (id === 'AS-011') {
-            return {
-                id,
-                name: 'Md Mehedi Hasan',
-                role: 'Graphics Designer',
-                image: `https://api.dicebear.com/7.x/micah/svg?seed=AS011&backgroundColor=b6e3f4,c0aede,d1d4f9`
-            };
-        }
-
-        if (id === 'AS-012') {
-            return {
-                id,
-                name: 'Md Abdus Saif',
-                role: 'Tiktok Ads Expert',
-                image: '/team-abdus-saif.png'
-            };
-        }
-
-        if (id === 'AS-013') {
-            return {
-                id,
-                name: 'SM Prithibi Rahman',
-                role: 'Google Ads Expert (YouTube Marketing)',
-                image: '/team-prithibi.png'
-            };
-        }
-
-        if (id === 'AS-014') {
-            return {
-                id,
-                name: 'Md Shawon Hosse',
-                role: 'Ads Analyzer',
-                image: '/team-shawon.png'
-            };
-        }
-
-        if (id === 'AS-015') {
-            return {
-                id,
-                name: 'Shajid Ahmed',
-                role: 'Manager',
-                image: '/team-shajid-ahmed.png'
-            };
-        }
-
-
-        return {
-            id,
-            name: `Team Member ${idNumber}`,
-            role: role,
-            image: `https://api.dicebear.com/7.x/micah/svg?seed=AS${idx}&backgroundColor=b6e3f4,c0aede,d1d4f9`
-        };
-    });
-};
-
-const TEAM_MEMBERS = generateTeamMembers();
+// Specific Team Members List
+const TEAM_MEMBERS = [
+    {
+        id: 'AS-002',
+        name: 'Shajid Ahmed',
+        role: 'Manager',
+        image: '/team-shajid-ahmed-new.png'
+    },
+    {
+        id: 'AS-003',
+        name: 'MD Amenol',
+        role: 'Senior Consultant',
+        image: '/team-amenol-latest.png'
+    },
+    {
+        id: 'AS-004',
+        name: 'Shawon Hossen',
+        role: 'Ads Analyzer',
+        image: '/team-shawon-hossen-new.png'
+    },
+    {
+        id: 'AS-005',
+        name: 'Himu Khan',
+        role: 'Facebook Ads Expert',
+        image: '/team-himu-khan-final.png'
+    },
+    {
+        id: 'AS-006',
+        name: 'Shawon Ahmed',
+        role: 'Facebook Ads Expert',
+        image: '/team-shawon-ahmed-latest.png'
+    },
+    {
+        id: 'AS-007',
+        name: 'Abdul Al Galib',
+        role: 'Facebook Ads Expert',
+        image: '/team-galib-new.png'
+    },
+    {
+        id: 'AS-008',
+        name: 'Sumaiya',
+        role: 'Tiktok Ads Expert',
+        image: '/team-sumaiya.jpg'
+    },
+    {
+        id: 'AS-009',
+        name: 'Sabnur Akter',
+        role: 'Tiktok Ads Expert',
+        image: '/team-sabnur-akter.png'
+    },
+    {
+        id: 'AS-010',
+        name: 'Abdus Saif',
+        role: 'Instagram Ads Expert',
+        image: '/team-abdus-saif-new.png'
+    },
+    {
+        id: 'AS-011',
+        name: 'Prithibi Rahman',
+        role: 'Google Ads Expert – YouTube Marketing',
+        image: '/team-prithibi-new.png'
+    },
+    {
+        id: 'AS-012',
+        name: 'Jahangir Alam',
+        role: 'Facebook Ads Expert',
+        image: '/team-jahangir-alam.png'
+    },
+    {
+        id: 'AS-013',
+        name: 'Jobayer Hossain',
+        role: 'Web Designer and Developer',
+        image: '/team-jobayer-new.png'
+    },
+    {
+        id: 'AS-014',
+        name: ' ',
+        role: 'Graphics Designer',
+        image: '/team-mahedi-hasan.png'
+    }
+];
 
 export const TeamSection = () => {
     const { t } = useLanguage();
 
-    const TeamCard = ({ member, index }: { member: any, index: number }) => (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.05 }}
-            whileHover={{ y: -5 }}
-            className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-100 border border-slate-100 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-xl hover:border-brand-neon/30"
-        >
-            <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-white border-2 border-slate-100 group-hover:border-brand-neon/50 transition-colors">
-                <div className="relative w-full h-full">
-                    <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover object-center"
-                        sizes="96px"
-                    />
+    const TeamCard = ({ member, index }: { member: any, index: number }) => {
+        // Get translated name and role, fallback to original if not found
+        const translatedMember = t.team.members[member.id] || { name: member.name, role: member.role };
+
+        return (
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-100 border border-brand-neon/30 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-xl"
+            >
+                <div className={`relative w-24 h-24 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-white border-2 border-brand-neon/50 transition-colors ${member.id === 'AS-002' ? 'p-3' : member.id === 'AS-006' ? 'p-1' : ''}`}>
+                    <div className={`relative w-full h-full ${['AS-002', 'AS-003', 'AS-005', 'AS-006'].includes(member.id) ? 'translate-y-2' : ''}`}>
+                        <Image
+                            src={member.image}
+                            alt={translatedMember.name}
+                            fill
+                            className="object-cover object-center"
+                            sizes="96px"
+                        />
+                    </div>
+                    <div className="absolute bottom-0 right-0 p-1 bg-green-500 rounded-full border-2 border-white z-10" title={t.tooltips.active}></div>
                 </div>
-                <div className="absolute bottom-0 right-0 p-1 bg-green-500 rounded-full border-2 border-white z-10" title={t.tooltips.active}></div>
-            </div>
 
-            <h4 className="font-bold text-lg text-heading mb-1 group-hover:text-brand-neon transition-colors">
-                {member.name}
-            </h4>
+                <h4 className="font-bold text-lg text-heading mb-1 group-hover:text-brand-neon transition-colors">
+                    {translatedMember.name}
+                </h4>
 
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full mb-3 border border-slate-100">
-                <Fingerprint size={12} />
-                <span>ID: {member.id}</span>
-            </div>
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 bg-slate-50 px-2.5 py-1 rounded-full mb-3 border border-slate-100">
+                    <Fingerprint size={12} />
+                    <span>ID: {member.id}</span>
+                </div>
 
-            <p className="text-sm font-medium text-slate-500 flex items-center justify-center gap-1.5 w-full pt-3 border-t border-slate-50">
-                <Briefcase size={14} className="text-brand-sky" />
-                {member.role}
-            </p>
-        </motion.div>
-    );
+                <p className="text-sm font-medium text-slate-500 flex items-center justify-center gap-1.5 w-full pt-3 border-t border-slate-50">
+                    <Briefcase size={14} className="text-brand-sky" />
+                    {translatedMember.role}
+                </p>
+            </motion.div>
+        );
+    };
 
     return (
         <section className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
@@ -253,9 +195,9 @@ export const TeamSection = () => {
 
                             {/* CEO Info */}
                             <div className="text-center md:text-left space-y-6 flex-1">
-                                <div className="relative inline-block">
-                                    <Quote className="absolute -top-4 -left-6 w-10 h-10 text-brand-neon/10 transform -scale-x-100" />
-                                    <blockquote className="text-2xl md:text-3xl font-bold text-heading italic leading-tight relative z-10">
+                                <div className="flex items-start gap-3">
+                                    <Quote className="w-10 h-10 text-brand-neon/40 transform -scale-x-100 shrink-0 -mt-2" />
+                                    <blockquote className="text-2xl md:text-3xl font-bold text-heading italic leading-tight">
                                         "{t.ceo.quote}"
                                     </blockquote>
                                 </div>
@@ -290,10 +232,12 @@ export const TeamSection = () => {
                 </div>
 
                 {/* Other Experts Heading */}
-                <div className="text-center mb-12">
-                    <h3 className="text-3xl font-bold text-blue-600">
-                        {t.team.expertTeam}
-                    </h3>
+                <div className="flex justify-center mb-12">
+                    <div className="bg-[#E6F3FF] border border-blue-100 px-12 py-4 rounded-xl shadow-sm">
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-wide">
+                            {t.team.expertTeam}
+                        </h3>
+                    </div>
                 </div>
 
                 {/* Team Grid */}

@@ -82,6 +82,12 @@ export interface Content {
         title: string;
         subtitle: string;
         expertTeam: string;
+        members: {
+            [key: string]: {
+                name: string;
+                role: string;
+            };
+        };
     };
     contact: {
         phoneWhatsapp: string;
@@ -215,12 +221,12 @@ export const content: Record<Language, Content> = {
             },
         },
         trust: {
-            title: 'কেন আমাদের বেছে নেবেন?',
-            description: 'আমরা শুধু সার্ভিস দেই না, আমরা ফলাফল তৈরি করি।',
+            title: 'কেন আমাদের বেছে নেবেন ?',
+            description: 'আমরা শুধু সার্ভিস দেই না, বরং ফলাফল তৈরি করি।',
             points: [
                 {
                     title: 'স্বীকৃত ও বিশ্বস্ত',
-                    desc: 'আমরা একটি সরকারি অনুমোদিত আইটি প্রতিষ্ঠান, ট্রেড লাইসেন্স নাম্বার (07614) যা আপনার বিনিয়োগের নিরাপত্তা নিশ্চিত করে।',
+                    desc: 'আমরা একটি সরকারি অনুমোদিত আইটি প্রতিষ্ঠান (ট্রেড লাইসেন্স নাম্বার-07614), যা আপনার বিনিয়োগের নিরাপত্তা নিশ্চিত করে।',
                     image: '/license.png'
                 },
                 {
@@ -250,7 +256,7 @@ export const content: Record<Language, Content> = {
             licenseClickHere: '(এখানে ক্লিক করুন)',
         },
         proofs: {
-            title: 'ক্লায়েন্ট রিভিউ (Client Reviews)',
+            title: 'ক্লায়েন্ট রিভিউ\'স',
             description: 'আমাদের কাজের বাস্তব ফলাফল দেখুন। আমরা কথায় নয়, কাজে বিশ্বাসী।',
             viewProof: 'প্রুফ দেখুন',
         },
@@ -305,12 +311,66 @@ export const content: Record<Language, Content> = {
             name: 'সোহানুর রহমান',
             role: 'সিইও এবং প্রতিষ্ঠাতা',
             quote: 'সফলতা শুধু লক্ষ্য নয়, এটি একটি যাত্রা',
-            description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
+            description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে 2020 সালে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
         },
         team: {
             title: 'আমাদের টিম',
             subtitle: 'আমাদের দক্ষ এক্সপার্ট টিমের সাথে পরিচিত হোন',
-            expertTeam: 'অন্যান্য এক্সপার্টবৃন্দ'
+            expertTeam: 'অন্যান্য এক্সপার্টবৃন্দ',
+            members: {
+                'AS-002': {
+                    name: 'সাজিদ আহমেদ',
+                    role: 'ম্যানেজার'
+                },
+                'AS-003': {
+                    name: 'মোঃ আমিনোল',
+                    role: 'সিনিয়র পরামর্শদাতা'
+                },
+                'AS-004': {
+                    name: 'শাওন হোসেন',
+                    role: 'এড বিশ্লেষক'
+                },
+                'AS-005': {
+                    name: 'হিমু খান',
+                    role: 'ফেসবুক এড অভিজ্ঞ'
+                },
+                'AS-006': {
+                    name: 'শাওন আহমেদ',
+                    role: 'ফেসবুক এড অভিজ্ঞ'
+                },
+                'AS-007': {
+                    name: 'আব্দুল আল গালিব',
+                    role: 'ফেসবুক এড অভিজ্ঞ'
+                },
+                'AS-008': {
+                    name: 'সুমাইয়া',
+                    role: 'টিকটক এড অভিজ্ঞ'
+                },
+                'AS-009': {
+                    name: 'শাবনুর আক্তার',
+                    role: 'টিকটক এড অভিজ্ঞ'
+                },
+                'AS-010': {
+                    name: 'আব্দুস সাইফ',
+                    role: 'ইনস্টাগ্রাম এড অভিজ্ঞ'
+                },
+                'AS-011': {
+                    name: 'পৃথিবী রহমান',
+                    role: 'গুগল এড অভিজ্ঞ (ইউটিউব মার্কেটিং)'
+                },
+                'AS-012': {
+                    name: 'জাহাঙ্গীর আলম',
+                    role: 'ফেসবুক এড অভিজ্ঞ'
+                },
+                'AS-013': {
+                    name: 'জোবায়ের হোসেন',
+                    role: 'ওয়েব ডিজাইনার এবং ডেভেলপার'
+                },
+                'AS-014': {
+                    name: 'মেহেদী হাসান',
+                    role: 'গ্রাফিক্স ডিজাইনার'
+                }
+            }
         },
         contact: {
             phoneWhatsapp: 'ফোন / হোয়াটসঅ্যাপ',
@@ -326,7 +386,7 @@ export const content: Record<Language, Content> = {
             address: 'কাস্টমস মোড়, কুষ্টিয়া সদর',
         },
         payment: {
-            modalTitle: 'পেমেন্ট ইন্সট্রাকশন',
+            modalTitle: 'পেমেন্ট করার নিয়ম',
             merchantNumber: 'মার্চেন্ট নাম্বার',
             howToPay: 'কিভাবে পেমেন্ট করবেন:',
             scanDirectly: 'সরাসরি স্ক্যান করুন',
@@ -335,30 +395,30 @@ export const content: Record<Language, Content> = {
             instructions: {
                 bkash: [
                     'আপনার বিকাশ অ্যাপ ওপেন করুন',
-                    'পেমেন্ট (Payment) অপশন সিলেক্ট করুন',
+                    'পেমেন্ট অপশন সিলেক্ট করুন',
                     'নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন',
                     'টাকার পরিমাণ উল্লেখ করুন',
                     'রেফারেন্স হিসেবে আপনার নাম দিন',
-                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                    'পিন দিয়ে পেমেন্ট কনফার্ম করুন'
                 ],
                 nagad: [
                     'আপনার নগদ অ্যাপ ওপেন করুন',
-                    'পেমেন্ট (Payment) অপশন সিলেক্ট করুন',
+                    'পেমেন্ট অপশন সিলেক্ট করুন',
                     'নিচের QR কোডটি স্ক্যান করুন অথবা নাম্বার টাইপ করুন',
                     'টাকার পরিমাণ উল্লেখ করুন',
                     'রেফারেন্স হিসেবে আপনার নাম দিন',
-                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                    'পিন দিয়ে পেমেন্ট কনফার্ম করুন'
                 ],
                 rocket: [
                     'আপনার রকেট অ্যাপ ওপেন করুন',
-                    'মার্চেন্ট পে (Merchant Pay) অপশন সিলেক্ট করুন',
+                    'মার্চেন্ট পে অপশন সিলেক্ট করুন',
                     'নিচে দেওয়া মার্চেন্ট নাম্বারটি টাইপ করুন',
                     'টাকার পরিমাণ উল্লেখ করুন',
                     'রেফারেন্স হিসেবে আপনার নাম দিন',
-                    'PIN দিয়ে পেমেন্ট কনফার্ম করুন'
+                    'পিন দিয়ে পেমেন্ট কনফার্ম করুন'
                 ],
                 npsb: [
-                    'আপনার ব্যাংক অ্যাপ (যেমন CityTouch) বা পেমেন্ট অ্যাপ ওপেন করুন',
+                    'আপনার ব্যাংক অ্যাপ বা পেমেন্ট অ্যাপ ওপেন করুন',
                     'যে কোন ব্যাংক/বিকাশ/নগদ/রকেট/উপায়/ট‍্যাপ/এম ক‍্যাশ/কিউ ক্যাশ থেকে পেমেন্ট করুন',
                     'নিচের QR কোডটি স্ক্যান করুন',
                     'টাকার পরিমাণ উল্লেখ করুন',
@@ -416,32 +476,34 @@ export const content: Record<Language, Content> = {
             seeDetails: 'See Details →',
             details: {
                 facebook: [
-                    'Targeted Ad Campaigns & Professional Ad Setup',
-                    'Facebook Pixel Setup for Conversion Tracking',
-                    'Regular Engagement Ads & Real Follower Service',
-                    'Audience Retargeting & Sales Funnel Creation'
+                    'Ads Campaign',
+                    'Professional Ads',
+                    'Pixel Ads',
+                    'Regular Ads',
+                    'Facebook Follower'
                 ],
                 instagram: [
-                    'Targeted Ad Campaigns & Professional Ad Setup',
-                    'Facebook Pixel Setup for Conversion Tracking',
-                    'Regular Engagement Ads & Real Follower Service',
-                    'Story & Reels Promotion'
+                    'Ads Campaign',
+                    'Professional Ads',
+                    'Pixel Ads',
+                    'Regular Ads',
+                    'Instagram Follower'
                 ],
                 tiktok: [
-                    'Ad Campaign',
-                    'Video Promotion (Like, Comment, Share, View)',
-                    'TikTok Followers',
+                    'Ads Campaign',
+                    'Video Promote(Like,Comment,Share,View)',
+                    'Tiktok Follower',
                     'Coin Recharge'
                 ],
                 youtube: [
-                    'YouTube Product Marketing',
-                    'Subscribers',
+                    'Product Marketing on Youtube',
+                    'Subscriber',
                     'Watch Time',
-                    'Video Engagement (Like, Comment, Share)',
+                    'Video’s like comment share',
                     'Professional Ads Campaign',
-                    'Google AdSense Pin Verification',
-                    'YouTube Channel Monetization',
-                    'YouTube Premium'
+                    'Google AdSence pin verify',
+                    'Youtube channel monetize',
+                    'Youtube Premium'
                 ],
                 web: [
                     'Domain',
@@ -456,10 +518,13 @@ export const content: Record<Language, Content> = {
                     'Upgrade Old Structure'
                 ],
                 graphics: [
-                    'Professional Graphics Design',
-                    'Logo & Brand Book Creation',
-                    'Social Media Content Design',
-                    'Promotional Banner & Poster Design'
+                    'Branding logo, brand identity',
+                    'Digital & social media',
+                    'Banner & cover photo',
+                    'Ads design',
+                    'Photo editing',
+                    'Vector tracing',
+                    'Illustration'
                 ],
             },
         },
@@ -469,7 +534,7 @@ export const content: Record<Language, Content> = {
             points: [
                 {
                     title: 'Authorized & Trusted',
-                    desc: 'We are a government-licensed authorized IT institution, Trade License Number (07614) ensuring the safety of your investment.',
+                    desc: 'We are a government-licensed authorized IT institution (Trade License Number-07614), ensuring the safety of your investment.',
                     image: '/license.png'
                 },
                 {
@@ -559,7 +624,61 @@ export const content: Record<Language, Content> = {
         team: {
             title: 'Our Team',
             subtitle: 'Meet our expert team members',
-            expertTeam: 'Others Experts'
+            expertTeam: 'Others Experts',
+            members: {
+                'AS-002': {
+                    name: 'Shajid Ahmed',
+                    role: 'Manager'
+                },
+                'AS-003': {
+                    name: 'MD Amenol',
+                    role: 'Senior Consultant'
+                },
+                'AS-004': {
+                    name: 'Shawon Hossen',
+                    role: 'Ads Analyzer'
+                },
+                'AS-005': {
+                    name: 'Himu Khan',
+                    role: 'Facebook Ads Expert'
+                },
+                'AS-006': {
+                    name: 'Shawon Ahmed',
+                    role: 'Facebook Ads Expert'
+                },
+                'AS-007': {
+                    name: 'Abdul Al Galib',
+                    role: 'Facebook Ads Expert'
+                },
+                'AS-008': {
+                    name: 'Sumaiya',
+                    role: 'Tiktok Ads Expert'
+                },
+                'AS-009': {
+                    name: 'Sabnur Akter',
+                    role: 'Tiktok Ads Expert'
+                },
+                'AS-010': {
+                    name: 'Abdus Saif',
+                    role: 'Instagram Ads Expert'
+                },
+                'AS-011': {
+                    name: 'Prithibi Rahman',
+                    role: 'Google Ads Expert – YouTube Marketing'
+                },
+                'AS-012': {
+                    name: 'Jahangir Alam',
+                    role: 'Facebook Ads Expert'
+                },
+                'AS-013': {
+                    name: 'Jobayer Hossain',
+                    role: 'Web Designer and Developer'
+                },
+                'AS-014': {
+                    name: 'Mahedi Hasan',
+                    role: 'Graphics Designer'
+                }
+            }
         },
         contact: {
             phoneWhatsapp: 'Phone / WhatsApp',
@@ -607,7 +726,7 @@ export const content: Record<Language, Content> = {
                     'Confirm payment with PIN'
                 ],
                 npsb: [
-                    'Open your bank app (e.g., CityTouch) or payment app',
+                    'Open your bank app (e.g., CityTouch)',
                     'Pay from any Bank/Bkash/Nagad/Rocket/Upay/Tap/MCash/QCash',
                     'Scan the QR code below',
                     'Enter the amount',

@@ -43,6 +43,18 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
         npsb: 'bg-[#005C9D]'
     };
 
+    const bnMethodNames: Record<string, string> = {
+        bkash: 'বিকাশ',
+        nagad: 'নগদ',
+        rocket: 'রকেট',
+        npsb: 'NPSB',
+        bank: 'ব্যাংক'
+    };
+
+    const displayMethod = (useLanguage().language === 'bn' && method in bnMethodNames)
+        ? bnMethodNames[method]
+        : method;
+
     return (
         <AnimatePresence>
             <motion.div
@@ -62,7 +74,7 @@ export const PaymentModal = ({ isOpen, onClose, method, number, qrImage }: Payme
                     {/* Header */}
                     <div className={`${colors[method]} p-4 flex justify-between items-center text-white`}>
                         <h3 className="text-xl font-bold">
-                            <span className={method === 'npsb' ? 'uppercase' : 'capitalize'}>{method}</span> {t.payment.modalTitle}
+                            <span className={method === 'npsb' ? 'uppercase' : 'capitalize'}>{displayMethod}</span> {t.payment.modalTitle}
                         </h3>
                         <button onClick={onClose} className="p-1 hover:bg-white/20 rounded-full transition-colors">
                             <X size={24} />

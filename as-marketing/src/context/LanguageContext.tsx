@@ -23,6 +23,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         }
     }, []);
 
+    // Update html lang attribute and global font class
+    useEffect(() => {
+        document.documentElement.lang = language;
+        if (language === 'bn') {
+            document.body.classList.add('font-hind');
+            document.body.classList.remove('font-inter');
+        } else {
+            document.body.classList.add('font-inter');
+            document.body.classList.remove('font-hind');
+        }
+    }, [language]);
+
     const handleSetLanguage = (lang: Language) => {
         setLanguage(lang);
         localStorage.setItem('as-marketing-lang', lang);
