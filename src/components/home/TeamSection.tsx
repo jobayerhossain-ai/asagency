@@ -105,7 +105,7 @@ export const TeamSection = () => {
         if (role.includes('Facebook')) return <Facebook size={16} className="text-blue-600" strokeWidth={2} />;
         if (role.includes('Instagram')) return <Instagram size={16} className="text-pink-500" strokeWidth={2} />;
         if (role.includes('Tiktok')) return <Video size={16} className="text-black" strokeWidth={2} />;
-        if (role.includes('Google') || role.includes('YouTube')) return <Youtube size={16} className="text-red-600" strokeWidth={2} />;
+        if (role.includes('Google') || role.includes('YouTube')) return <Youtube size={20} className="text-red-600 -mt-1" strokeWidth={2} />;
         if (role.includes('Web')) return <Code size={16} className="text-emerald-500" strokeWidth={2} />;
         if (role.includes('Graphics')) return <Palette size={16} className="text-purple-500" strokeWidth={2} />;
         return <Briefcase size={16} className="text-orange-500" strokeWidth={2} />;
