@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { Quote, Briefcase, BadgeCheck, Fingerprint } from 'lucide-react';
+import { Quote, Briefcase, BadgeCheck, Fingerprint, Lightbulb, LineChart, Facebook, Instagram, Video, Youtube, Code, Palette, Megaphone } from 'lucide-react';
 
 // Specific Team Members List
 const TEAM_MEMBERS = [
@@ -12,7 +12,7 @@ const TEAM_MEMBERS = [
         id: 'AS-002',
         name: 'Shajid Ahmed',
         role: 'Manager',
-        image: '/team-shajid-ahmed-new.png'
+        image: '/team-shajid-ahmed-final.png'
     },
     {
         id: 'AS-003',
@@ -85,15 +85,37 @@ const TEAM_MEMBERS = [
         name: ' ',
         role: 'Graphics Designer',
         image: '/team-mahedi-hasan.png'
+    },
+    {
+        id: 'AS-015',
+        name: 'Akhi Gazi',
+        role: 'Facebook & Instagram Ads Expert',
+        image: '/team-akhi-gazi.png'
     }
 ];
 
 export const TeamSection = () => {
     const { t } = useLanguage();
 
+    const getRoleIcon = (role: string) => {
+        if (role.includes('Manager')) return <Briefcase size={16} className="text-orange-500" strokeWidth={2} />;
+        if (role.includes('Consultant')) return <Lightbulb size={16} className="text-yellow-500" strokeWidth={2} />;
+        if (role.includes('Analyzer')) return <LineChart size={16} className="text-blue-500" strokeWidth={2} />;
+        if (role.includes('Facebook') && role.includes('Instagram')) return <Megaphone size={16} className="text-pink-600" strokeWidth={2} />;
+        if (role.includes('Facebook')) return <Facebook size={16} className="text-blue-600" strokeWidth={2} />;
+        if (role.includes('Instagram')) return <Instagram size={16} className="text-pink-500" strokeWidth={2} />;
+        if (role.includes('Tiktok')) return <Video size={16} className="text-black" strokeWidth={2} />;
+        if (role.includes('Google') || role.includes('YouTube')) return <Youtube size={16} className="text-red-600" strokeWidth={2} />;
+        if (role.includes('Web')) return <Code size={16} className="text-emerald-500" strokeWidth={2} />;
+        if (role.includes('Graphics')) return <Palette size={16} className="text-purple-500" strokeWidth={2} />;
+        return <Briefcase size={16} className="text-orange-500" strokeWidth={2} />;
+    };
+
     const TeamCard = ({ member, index }: { member: any, index: number }) => {
         // Get translated name and role, fallback to original if not found
         const translatedMember = t.team.members[member.id] || { name: member.name, role: member.role };
+        // Use the original english role for icon matching to ensure consistency
+        const Icon = getRoleIcon(member.role);
 
         return (
             <motion.div
@@ -105,7 +127,11 @@ export const TeamSection = () => {
                 className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-100 border border-brand-neon/30 flex flex-col items-center text-center group transition-all duration-300 hover:shadow-xl"
             >
                 <div className={`relative w-24 h-24 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-white border-2 border-brand-neon/50 transition-colors ${member.id === 'AS-002' ? 'p-3' : member.id === 'AS-006' ? 'p-1' : ''}`}>
-                    <div className={`relative w-full h-full ${['AS-002', 'AS-003', 'AS-005', 'AS-006'].includes(member.id) ? 'translate-y-2' : ''}`}>
+                    <div className={`relative w-full h-full 
+                        ${['AS-002', 'AS-003', 'AS-005', 'AS-006'].includes(member.id) ? 'translate-y-2' : ''} 
+                        ${['AS-003', 'AS-005', 'AS-012'].includes(member.id) ? 'scale-125' : ''}
+                        ${['AS-002', 'AS-013'].includes(member.id) ? 'scale-[1.4]' : ''}
+                    `}>
                         <Image
                             src={member.image}
                             alt={translatedMember.name}
@@ -127,7 +153,7 @@ export const TeamSection = () => {
                 </div>
 
                 <p className="text-sm font-medium text-slate-500 flex items-center justify-center gap-1.5 w-full pt-3 border-t border-slate-50">
-                    <Briefcase size={14} className="text-brand-sky" />
+                    {Icon}
                     {translatedMember.role}
                 </p>
             </motion.div>
@@ -135,13 +161,13 @@ export const TeamSection = () => {
     };
 
     return (
-        <section className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <section className="relative py-12 md:py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(10,26,255,0.03),transparent_70%)] pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-8 md:mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +187,7 @@ export const TeamSection = () => {
                 </div>
 
                 {/* CEO Card - Premium & Highlighted */}
-                <div className="mb-20 flex justify-center">
+                <div className="mb-10 md:mb-20 flex justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -232,7 +258,7 @@ export const TeamSection = () => {
                 </div>
 
                 {/* Other Experts Heading */}
-                <div className="flex justify-center mb-12">
+                <div className="flex justify-center mb-6 md:mb-12">
                     <div className="bg-[#E6F3FF] border border-blue-100 px-12 py-4 rounded-xl shadow-sm">
                         <h3 className="text-2xl md:text-3xl font-bold text-slate-800 tracking-wide">
                             {t.team.expertTeam}
@@ -241,7 +267,7 @@ export const TeamSection = () => {
                 </div>
 
                 {/* Team Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 max-w-7xl mx-auto">
                     {TEAM_MEMBERS.map((member, index) => (
                         <TeamCard key={index} member={member} index={index} />
                     ))}

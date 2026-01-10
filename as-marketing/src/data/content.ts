@@ -155,7 +155,7 @@ export const content: Record<Language, Content> = {
             subtitle: 'বিশ্বাসের একটি নাম',
             description: 'আমরা আধুনিক ডিজিটাল মার্কেটিং স্ট্র্যাটেজির মাধ্যমে আপনার ব্যবসাকে অনলাইনে দ্রুত গ্রো করতে সহায়তা করি।',
             ctaPrimary: 'ফেসবুকে মেসেজ দিন',
-            ctaSecondary: 'WhatsApp এ যোগাযোগ করুন',
+            ctaSecondary: 'হোয়াটসঅ্যাপ এ যোগাযোগ করুন',
         },
         services: {
             title: 'আমাদের প্রিমিয়াম সার্ভিসসমূহ',
@@ -239,7 +239,7 @@ export const content: Record<Language, Content> = {
                 },
                 {
                     title: 'বাস্তবসম্মত পরামর্শ',
-                    desc: 'আমরা শুধু বুস্ট করি না, বরং আপনার বিজনেস গ্রোথের জন্য প্রয়োজনীয় গাইডলাইন প্রদান করি।'
+                    desc: 'আমরা শুধু কাজ করি না, বরং আপনার বিজনেস গ্রোথের জন্য প্রয়োজনীয় গাইডলাইন প্রদান করি।'
                 },
                 {
                     title: 'অব্যাহত সাপোর্ট',
@@ -247,7 +247,7 @@ export const content: Record<Language, Content> = {
                 },
                 {
                     title: 'স্বচ্ছতা ও সত্যনিষ্ঠা',
-                    desc: 'ফেসবুক বা ডিজিটাল প্ল্যাটফর্মের অ্যালগরিদম প্রতিনিয়ত পরিবর্তনশীল। তাই আমরা মিথ্যে আশ্বাস না দিয়ে ডাটা এবং স্ট্র্যাটেজির ওপর ভিত্তি করে কাজ করি।'
+                    desc: 'ফেসবুক বা ডিজিটাল প্ল্যাটফর্মের অ্যালগরিদম প্রতিনিয়ত পরিবর্তনশীল। তাই আমরা আপডেট ডাটা এবং স্ট্র্যাটেজির ওপর ভিত্তি করে কাজ করি।'
                 },
                 {
                     title: '২৪/৭ সাপোর্ট',
@@ -312,7 +312,7 @@ export const content: Record<Language, Content> = {
         },
         ceo: {
             title: 'আমাদের নেতৃত্ব',
-            name: 'সোহানুর রহমান',
+            name: 'শোহানুর রহমান',
             role: 'সিইও এবং প্রতিষ্ঠাতা',
             quote: 'সফলতা শুধু লক্ষ্য নয়, এটি একটি যাত্রা',
             description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে 2020 সালে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
@@ -373,6 +373,10 @@ export const content: Record<Language, Content> = {
                 'AS-014': {
                     name: 'মেহেদী হাসান',
                     role: 'গ্রাফিক্স ডিজাইনার'
+                },
+                'AS-015': {
+                    name: 'আখি গাজী',
+                    role: 'ফেসবুক এবং ইনস্টাগ্রাম এড এক্সপার্ট'
                 }
             }
         },
@@ -444,7 +448,7 @@ export const content: Record<Language, Content> = {
         },
         tooltips: {
             active: 'সক্রিয়',
-            orderWhatsapp: 'WhatsApp এ অর্ডার করুন',
+            orderWhatsapp: 'হোয়াটসঅ্যাপ এ অর্ডার করুন',
             officeLocation: 'অফিসের লোকেশন',
             googleMap: 'গুগল ম্যাপ - AS Marketing Business'
         },
@@ -549,7 +553,7 @@ export const content: Record<Language, Content> = {
                 },
                 {
                     title: 'Realistic Advice',
-                    desc: 'We don\'t just boost; we provide necessary guidelines for your business growth.'
+                    desc: 'We don\'t just work, we provide necessary guidelines for your business growth.'
                 },
                 {
                     title: 'Continuous Support',
@@ -557,7 +561,7 @@ export const content: Record<Language, Content> = {
                 },
                 {
                     title: 'Transparency & Integrity',
-                    desc: 'We work based on data and strategy, not false promises, adapting to ever-changing digital algorithms.'
+                    desc: 'So we work based on updated data and strategy.'
                 },
                 {
                     title: '24/7 Support Service',
@@ -622,10 +626,10 @@ export const content: Record<Language, Content> = {
         },
         ceo: {
             title: 'Our Leadership',
-            name: 'Sohanur Rahman',
+            name: 'Shohanur Rahman',
             role: 'CEO & Founder',
             quote: 'Success is not just a goal, it\'s a journey.',
-            description: 'I founded AS Marketing Business with a vision to unlock new horizons of business success through world-class digital marketing services. Our goal is to ensure the best results and long-term success for every client.'
+            description: 'I founded AS Marketing Business in 2020 with a vision to unlock new horizons of business success through world-class digital marketing services. Our goal is to ensure the best results and long-term success for every client.'
         },
         team: {
             title: 'Our Team',
@@ -683,6 +687,10 @@ export const content: Record<Language, Content> = {
                 'AS-014': {
                     name: 'Mahedi Hasan',
                     role: 'Graphics Designer'
+                },
+                'AS-015': {
+                    name: 'Akhi Gazi',
+                    role: 'Facebook & Instagram Ads Expert'
                 }
             }
         },
