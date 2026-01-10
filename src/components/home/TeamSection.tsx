@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { Quote, Briefcase, BadgeCheck, Fingerprint, Lightbulb, LineChart, Facebook, Instagram, Video, Youtube, Code, Palette, Megaphone } from 'lucide-react';
+import { TikTokIcon } from '@/components/ui/BrandIcons';
 
 // Specific Team Members List
 const TEAM_MEMBERS = [
@@ -104,9 +105,9 @@ export const TeamSection = () => {
         if (role.includes('Facebook') && role.includes('Instagram')) return <Megaphone size={16} className="text-pink-600" strokeWidth={2} />;
         if (role.includes('Facebook')) return <Facebook size={16} className="text-blue-600" strokeWidth={2} />;
         if (role.includes('Instagram')) return <Instagram size={16} className="text-pink-500" strokeWidth={2} />;
-        if (role.includes('Tiktok')) return <Video size={16} className="text-black" strokeWidth={2} />;
-        if (role.includes('Google') || role.includes('YouTube')) return <Youtube size={20} className="text-red-600 -mt-1" strokeWidth={2} />;
-        if (role.includes('Web')) return <Code size={16} className="text-emerald-500" strokeWidth={2} />;
+        if (role.includes('Tiktok')) return <TikTokIcon size={18} className="text-black" />;
+        if (role.includes('Google') || role.includes('YouTube')) return <Youtube size={22} className="text-red-600 -mt-1.5" strokeWidth={2} />;
+        if (role.includes('Web')) return <Code size={20} className="text-emerald-500 -mt-1 ml-1" strokeWidth={2} />;
         if (role.includes('Graphics')) return <Palette size={16} className="text-purple-500" strokeWidth={2} />;
         return <Briefcase size={16} className="text-orange-500" strokeWidth={2} />;
     };
