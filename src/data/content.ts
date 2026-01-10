@@ -304,7 +304,7 @@ export const content: Record<Language, Content> = {
             ]
         },
         footer: {
-            rights: '© ২০২০-২০২৫ AS Marketing Business. সর্বস্বত্ব সংরক্ষিত।',
+            rights: '© ২০২০-{year} AS Marketing Business. সর্বস্বত্ব সংরক্ষিত।',
             followUs: 'আমাদের অনুসরণ করুন',
             company: 'কোম্পানি',
             services: 'সার্ভিসসমূহ',
@@ -618,7 +618,7 @@ export const content: Record<Language, Content> = {
             ]
         },
         footer: {
-            rights: '© 2020-2025 AS Marketing Business. All rights reserved.',
+            rights: '© 2020-{year} AS Marketing Business. All rights reserved.',
             followUs: 'Follow Us',
             company: 'Company',
             services: 'Services',

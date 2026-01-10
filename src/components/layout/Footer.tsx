@@ -10,7 +10,13 @@ import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react';
 import { CONFIG } from '@/data/config';
 
 export const Footer = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const currentYear = new Date().getFullYear();
+    const displayYear = language === 'bn'
+        ? currentYear.toString().replace(/[0-9]/g, (d) => "০১২৩৪৫৬৭৮৯"[parseInt(d)])
+        : currentYear.toString();
+
 
     const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
         <li>
@@ -142,7 +148,7 @@ export const Footer = () => {
 
                 <div className="border-t border-slate-100 pt-6 flex flex-col items-center gap-4">
                     <p className="text-slate-400 text-xs font-medium text-center">
-                        {t.footer.rights}
+                        {t.footer.rights.replace('{year}', displayYear)}
                     </p>
                     <div className="text-xs font-medium text-slate-400 text-center">
                         Design & Developed by <a href="https://www.facebook.com/asmarketingbusiness1.bd" target="_blank" rel="noopener noreferrer" className="text-brand-neon hover:text-brand-neon/80 transition-colors">AS Marketing Business</a>
