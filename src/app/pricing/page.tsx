@@ -131,7 +131,13 @@ Please provide details.`;
                                         <div className="mt-auto bg-yellow-50 p-4 rounded-xl border border-yellow-100">
                                             <p className="text-sm text-slate-700 leading-relaxed">
                                                 <span className="font-bold text-yellow-800 block mb-1">{t.pricing.noteLabel}</span>
-                                                {sub.note}
+                                                {sub.note.split(/([0-9\u09E6-\u09EF]+)/g).map((part, i) => (
+                                                    /^[0-9\u09E6-\u09EF]+$/.test(part) ? (
+                                                        <span key={i} className="text-brand-neon font-bold text-base">{part}</span>
+                                                    ) : (
+                                                        <span key={i}>{part}</span>
+                                                    )
+                                                ))}
                                             </p>
                                         </div>
                                     )}
