@@ -102,7 +102,7 @@ export const TeamSection = () => {
         if (role.includes('Manager')) return <Briefcase size={16} className="text-orange-500" strokeWidth={2} />;
         if (role.includes('Consultant')) return <Lightbulb size={16} className="text-yellow-500" strokeWidth={2} />;
         if (role.includes('Analyzer')) return <LineChart size={16} className="text-blue-500" strokeWidth={2} />;
-        if (role.includes('Facebook') && role.includes('Instagram')) return <Megaphone size={16} className="text-pink-600" strokeWidth={2} />;
+        if (role.includes('Facebook') && role.includes('Instagram')) return <Instagram size={16} className="text-pink-600" strokeWidth={2} />;
         if (role.includes('Facebook')) return <Facebook size={16} className="text-blue-600" strokeWidth={2} />;
         if (role.includes('Instagram')) return <Instagram size={16} className="text-pink-500" strokeWidth={2} />;
         if (role.includes('Tiktok')) return <TikTokIcon size={18} className="text-black" />;
