@@ -312,7 +312,7 @@ export const content: Record<Language, Content> = {
         },
         ceo: {
             title: 'আমাদের নেতৃত্ব',
-            name: 'শোহানুর রহমান',
+            name: 'সোহানুর রহমান',
             role: 'সিইও এবং প্রতিষ্ঠাতা',
             quote: 'সফলতা শুধু লক্ষ্য নয়, এটি একটি যাত্রা',
             description: 'বিশ্বমানের ডিজিটাল মার্কেটিং সেবা প্রদানের মাধ্যমে ব্যবসায়িক সাফল্যের নতুন দিগন্ত উন্মোচনের স্বপ্ন নিয়ে 2020 সালে AS Marketing Business প্রতিষ্ঠা করেছি। আমাদের লক্ষ্য হলো প্রতিটি ক্লায়েন্টের জন্য সেরা ফলাফল এবং দীর্ঘমেয়াদী সাফল্য নিশ্চিত করা।'
@@ -626,7 +626,7 @@ export const content: Record<Language, Content> = {
         },
         ceo: {
             title: 'Our Leadership',
-            name: 'Shohanur Rahman',
+            name: 'Sohanur Rahman',
             role: 'CEO & Founder',
             quote: 'Success is not just a goal, it\'s a journey.',
             description: 'I founded AS Marketing Business in 2020 with a vision to unlock new horizons of business success through world-class digital marketing services. Our goal is to ensure the best results and long-term success for every client.'
