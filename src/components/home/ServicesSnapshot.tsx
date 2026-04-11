@@ -188,9 +188,10 @@ export const ServicesSnapshot = () => {
                                 selectedPaymentMethod === 'nagad' ? "01626724262" : undefined
                         }
                         qrImage={
-                            selectedPaymentMethod === 'bkash' ? '/bkash-qr.jpg' :
+                            selectedPaymentMethod === 'bkash' ? '/bkash-qr-new.jpg' :
                                 selectedPaymentMethod === 'nagad' ? '/nagad-qr.jpg' :
-                                    selectedPaymentMethod === 'npsb' ? '/city-bank-qr.jpg' : undefined
+                                    selectedPaymentMethod === 'rocket' ? '/rocket-qr.jpg' :
+                                        selectedPaymentMethod === 'npsb' ? '/city-bank-qr.jpg' : undefined
                         }
                     />
                 )}
